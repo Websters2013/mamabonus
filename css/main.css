@@ -136,6 +136,65 @@
 .casino-bonus__date .year{
     font-size: 12px;
 }
+.casino-bonus_image{
+    width: 114px;
+    float: left;
+    margin-top: 26px;
+    margin-left: -18px;
+}
+.casino-bonus_game{
+    position: relative;
+}
+.casino-bonus__game dl{
+    overflow: hidden;
+    padding-top: 17px;
+    font-size: 12px;
+    position: relative;
+    left: -4px;
+    width: 270px;
+}
+.casino-bonus__game dl dt{
+    width: 145px;
+    display: inline-block;
+    color: #000;
+    margin-right: 13px;
+}
+.casino-bonus__game dl dd{
+    display: inline-block;
+    color: #6a828a;
+    margin-bottom: 7px;
+}
+.casino-bonus__game .casino-bonus-code{
+    font-size: 15px;
+    border: 2px dashed #dcdfe8;
+    background: #f8f8f8;
+    margin-bottom: 20px;
+    padding: 6px;
+    color: #000;
+    position: relative;
+    margin-left: -114px;
+    top: 1px;
+}
+.casino-bonus__game p{
+    color: #6a828a;
+    background-color: #f8f8f8;
+    font-size: 12px;
+    padding: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.casino-bonus__game>span{
+    font-size: 15px;
+    margin-left: 21px;
+}
+.casino-bonus__game .casino-bonus-status{
+    color: #0098ff;
+    font-size: 15px;
+}
+.casino-bonus-button{
+    display: inline-block;
+    width: 100%;
+}
 /* --------------- /casino-bonus --------------- */
 
 /* --------------- logo --------------- */
@@ -147,3 +206,32 @@
     left: 0;
 }
 /* --------------- /logo --------------- */
+/* --------------- btn --------------- */
+.btn{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    background: #b5b9c7;
+    border-radius: 6px;
+    width: 146px;
+    display: inline-block;
+    height: 39px;
+    text-align: center;
+    padding-top: 14px;
+}
+.btn_play{
+    background: #dc2d26;
+    float: right;
+}
+.btn:hover{
+    background: #d9dce7;
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+}
+.btn_play:hover{
+    background: #f17b76;
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+}
+/* --------------- /btn --------------- */
+
