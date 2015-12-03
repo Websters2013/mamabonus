@@ -91,7 +91,7 @@
     height: 153px;
     background: #fff;
     box-shadow: 0 -13px 30px #eaeaea;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 .site__footer-menu{
     text-align: center;
@@ -104,9 +104,9 @@
     color: #6a828a;
 }
 .site__footer-layout li{
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
-.site__footer-menu li a:hover{
+.site__footer-layout li a:hover{
     color:#0098ff;
 }
 .site__footer-popular{
@@ -142,18 +142,23 @@
         height: 280px;
     }
     .site__footer-layout {
-        padding-top: 65px;
+        padding-top: 53px;
     }
     .site__footer-layout li a{
         font-size: 30px;
     }
     .site__footer-logo{
         display: block;
+        bottom: 28px;
+        left: 16px;
     }
     .site__footer-menu {
         display: inline-block;
-        margin-left: 260px;
+        margin-left: 316px;
         vertical-align: top;
+    }
+    .site__footer-layout li {
+        margin-bottom: 18px;
     }
     /* --------------- /site__footer --------------- */
 }
@@ -164,17 +169,17 @@
         height: 186px;
     }
     .site__footer-layout {
-        padding-top: 30px;
+        padding-top: 34px;
     }
     .site__footer-popular{
         display: inline-block;
         vertical-align: top;
-        margin-left: 100px;
+        margin-left: 103px;
     }
     .site__footer-super{
         display: inline-block;
         vertical-align: top;
-        margin-left: 100px;
+        margin-left: 107px;
     }
     .site__footer-super>h2{
         color:#dc2d26;
@@ -184,10 +189,10 @@
         font-size: 14px;
     }
     .site__footer-layout li{
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
     .site__footer-layout h2{
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         font-size: 16px;
     }
     .site__footer-menu>h2{
@@ -197,8 +202,12 @@
     .site__footer-logo{
         width: 136px;
         height: 123px;
-        bottom: 30px;
+        bottom: 36px;
         left: 48px;
+    }
+    .site__footer-menu {
+        margin-left: 256px;
+        text-align: left;
     }
     /* --------------- /site__footer --------------- */
 }
