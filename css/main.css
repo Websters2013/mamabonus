@@ -89,24 +89,62 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 100%;
     height: 153px;
 }
+.site__form input,
+.site__form textarea {
+    width: 100%;
+    height: 38px;
+    border: 1px solid #a5b0b4;
+    color: #a5b0b4;
+    border-radius: 4px;
+    margin-bottom: 9px;
+    font-size: 14px;
+    padding: 0 9px;
+    background: rgba(255,255,255,0.6);
+}
+.site__form textarea {
+    height: 109px;
+    padding: 8px 9px;
+}
+.site__form .btn_review {
+    display: block;
+    margin: 0 auto;
+    width: 153px;
+    left: auto;
+    padding: 0;
+}
 .site__content {
     position: relative;
     max-width: 960px;
     margin: 0 auto;
-    z-index: 2;
+    z-index: 3;
 }
-.site__content h2{
-    font-size: 16px;
+.site__caption {
+    font-size: 14px;
     color: #6a828a;
     text-align: center;
-    border: 1px dashed #6a828a;
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: -0.6px;
     padding: 10px 0;
+    position: relative;
+    margin-bottom: 18px;
+}
+.site__caption:after,
+.site__caption:before {
+    content: '';
+    position: absolute;
+    left: -3px;
+    right: -3px;
+    top: 0;
+    height: 1px;
+    border-top: 2px dotted #dcdee5;
+}
+.site__caption:after {
+    top: auto;
+    bottom: -1px;
 }
 .site__content-layout{
-    padding-top: 13px;
+    padding: 13px 3px 0;
     overflow: hidden;
 }
 .site__content-layout:after{
@@ -123,7 +161,7 @@ input[type="search"]::-webkit-search-cancel-button {
     border-bottom: 5px solid #0098ff;
     background-color: #2d3e50;
     box-shadow: 0 0 10px #777;
-    z-index: 3;
+    z-index: 4;
 }
 .site__header-layout{
     position: relative;
@@ -181,9 +219,7 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 100%;
     height: 100%;
 }
-.site__content-item{
-    padding: 3px;
-}
+.site__content-item{border: 1px solid #f9f9f9;border-radius: 4px;background: #fff;box-shadow: 2px 2px 4px rgba(0,0,0,0.2);margin-bottom: 13px;}
 .site__content .site__content-head{
     background: #dcdfe8;
     position: relative;
@@ -222,28 +258,8 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-top: 2px;
 
 }
-.site__form input,
-.site__form textarea {
-    width: 100%;
-    height: 38px;
-    border: 1px solid #a5b0b4;
-    color: #a5b0b4;
-    border-radius: 4px;
-    margin-bottom: 9px;
-    font-size: 14px;
-    padding: 0 9px;
-    background: rgba(255,255,255,0.6);
-}
-.site__form textarea {
-    height: 109px;
-    padding: 8px 9px;
-}
-.site__form .btn_review {
-    display: block;
-    margin: 0 auto;
-    width: 153px;
-    left: auto;
-    padding: 0;
+.site__content-item_contacts {
+    margin-bottom: 223px;
 }
 /* --------------- /site --------------- */
 
@@ -505,6 +521,8 @@ input[type="search"]::-webkit-search-cancel-button {
     height: 33px;
     text-align: center;
     padding-top: 11px;
+    -webkit-transition: background 0.3s ease, color 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 .btn_play{
     background: #dc2d26;
@@ -516,13 +534,9 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .btn:hover{
     background: #d9dce7;
-    -webkit-transition: background 0.3s ease;
-    transition: background 0.3s ease;
 }
 .btn_play:hover{
     background: #f17b76;
-    -webkit-transition: background 0.3s ease;
-    transition: background 0.3s ease;
 }
 .btn_review{
     background: #fff;
@@ -537,9 +551,6 @@ input[type="search"]::-webkit-search-cancel-button {
 .btn_review:hover{
     background: #94d0f9;
     color: #ffffff;
-    -webkit-transition: background 0.3s ease, color 0.3s ease;
-    transition: background 0.3s ease, color 0.3s ease;
-
 }
 /* --------------- /btn --------------- */
 
@@ -774,8 +785,28 @@ input[type="search"]::-webkit-search-cancel-button {
         margin-bottom: 18px;
     }
     .site__content-layout {
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 19px;
+        padding-right: 19px;
+    }
+    .site__caption:after, .site__caption:before {
+        left: -19px;
+        right: -19px;
+    }
+    .site__form input,
+    .site__form textarea {
+        border: 2px solid #a5b0b4;
+        height: 44px;
+        margin-bottom: 11px;
+        font-size: 16px;
+    }
+    .site__form textarea {
+        height: 129px;
+    }
+    .site__form .btn_review {
+        height: 35px;
+        width: 181px;
+        font-size: 14px;
+        margin-top: -3px;
     }
     /* --------------- /site --------------- */
 
@@ -842,6 +873,17 @@ input[type="search"]::-webkit-search-cancel-button {
         background-size: 18px 19px;
     }
     /* --------------- /search --------------- */
+
+    /* ------------ social-2 ------------ */
+    .social-2 {
+        padding: 18px 59px 0 61px;
+    }
+    .social-2:after {}
+    .social-2 a {
+        width: 33px;
+        height: 33px;
+    }
+    /* ------------ /social-2 ------------ */
 }
 
 @media (min-width: 950px){
