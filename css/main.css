@@ -151,8 +151,9 @@
 }
 .casino-bonus__title{
     color: #0098ff;
-    font-size: 16px;
-    padding: 18px 0 13px 5px;
+    font-size: 14px;
+    padding: 16px 0 15px 2px;
+    font-family: "helvetica-medium", sans-serif;
 }
 .casino-bonus__date{
     color: #8fa0a5;
