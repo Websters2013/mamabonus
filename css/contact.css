@@ -9,8 +9,68 @@
 */
 
 /* ------------ contacts ------------ */
-.contacts {}
-.contacts {}
+.contacts {
+    padding: 28px 15px 150px;
+}
+.contacts__address {
+    position: relative;
+    padding: 0 75px 26px 0;
+    font-style: normal;
+    border-bottom: 1px solid #d3dadc;
+}
+.contacts__address:before {
+    content: '24/7';
+    position: absolute;
+    background: url("../img/contacts__address-arrow.png") no-repeat;
+    background-size: contain;
+    width: 73px;
+    height: 79px;
+    font-size: 21px;
+    color: rgb( 181, 185, 199 );
+    top: 50%;
+    margin-top: -55px;
+    right: 1px;
+    text-align: center;
+    padding-top: 31px;
+}
+.contacts__address a {
+    color: #2d3e50;
+    font-size: 15px;
+    display: inline-block;
+    letter-spacing: 0;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: border-bottom 0.3s ease;
+    transition: border-bottom 0.3s ease;
+}
+.contacts__address a:hover {
+    border-bottom: 1px solid #2d3e50;
+}
+.contacts__address > div {
+    position: relative;
+    margin-bottom: 17px;
+    padding-left: 42px;
+}
+.contacts__address > div:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -10px;
+    background-size: contain !important;
+}
+.contacts__address > div:last-child {
+    margin-bottom: 0;
+}
+.contacts__address > div.contacts__address-mail:before {
+    background: url("../img/contacts__address-mail.png") no-repeat;
+    width: 27px;
+    height: 32px;
+}
+.contacts__address > div.contacts__address-site:before {
+    background: url("../img/contacts__address-site.png") no-repeat;
+    width: 29px;
+    height: 32px;
+    top: -5px;
+}
 .contacts {}
 .contacts {}
 /* ------------ /contacts ------------ */
