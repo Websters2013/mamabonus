@@ -13,7 +13,7 @@ $(function(){
         }
     });
 
-    $(window).on({
+    /*$(window).on({
         'load':function(){
             if($(window).width() >= 1006){
                 $('.menu__aside').clone().appendTo(".site__aside");
@@ -26,6 +26,6 @@ $(function(){
                 $('.aside__layout').clone().appendTo(".site__aside");
             }
         }
-    });
+    });*/
 
 } );
