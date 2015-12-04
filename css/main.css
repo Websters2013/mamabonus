@@ -95,6 +95,7 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 10px 0;
 }
 .site__content-layout{
+    padding-top: 13px;
     overflow: hidden;
 }
 .site__content-layout:after{
@@ -108,7 +109,6 @@ input[type="search"]::-webkit-search-cancel-button {
 .site__header {
     position: relative;
     height: 45px;
-    margin-bottom: 13px;
     border-bottom: 5px solid #0098ff;
     background-color: #2d3e50;
     box-shadow: 0 0 10px #777;
@@ -654,7 +654,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .search__frame input{
     height: 29px;
     width: 100%;
-    padding: 0 25px 0 4px;
+    padding: 0 22px 0 5px;
     border: 1px solid #7d8d96;
     border-radius: 2px;
     font: 10px 'helvetica-regular', sans-serif;
@@ -763,7 +763,6 @@ input[type="search"]::-webkit-search-cancel-button {
     .search__frame input{
         height: 36px;
         font-size: 12px;
-        padding: 0 5px;
     }
     .search__frame button {
         top: 5px;
@@ -787,6 +786,7 @@ input[type="search"]::-webkit-search-cancel-button {
         width: 208px;
         height: 500px;
         margin-right: 20px;
+        padding-top: 158px;
         box-shadow: 0 0 7px #ccc;
         background-color: #fff;
     }
@@ -880,7 +880,7 @@ input[type="search"]::-webkit-search-cancel-button {
         font-size: 18px;
         color: #0098ff;
     }
-    .menu__wrap .aside__layout{
+    .menu__wrap .menu__aside{
         display: none;
     }
     /* --------------- /menu --------------- */
