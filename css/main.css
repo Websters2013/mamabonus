@@ -167,6 +167,9 @@
 .casino-bonus__item{
     padding: 3px;
  }
+.casino-bonus__game{
+    overflow: hidden;
+}
 .casino-bonus__head{
     background: #dcdfe8;
     position: relative;
