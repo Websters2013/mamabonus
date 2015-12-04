@@ -9,9 +9,6 @@ $(function(){
 
 
             var element_width=(element_child_width/element_parent_width)*100;
-            console.log(element_width);
-            console.log(element_parent_width);
-            console.log(element_child_width);
 
         if (element_width<=20){
             element_child.addClass('grey');

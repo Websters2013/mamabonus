@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/*
+    contacts styles
+    version: 04.12.2015
+
+    casinos
+
+*/
+
+/* ------------ casinos ------------ */
+.casinos {
+
+}
+.casinos > div {
+
+}
+.casinos > div > div,
+.casinos > ul > li > div {
+
+}
+.casinos > div > div:nth-child(1),
+.casinos > ul > li > div:nth-child(1) {
+
+}
+.casinos > div > div:nth-child(2),
+.casinos > ul > li > div:nth-child(2) {
+
+}
+.casinos > div > div:nth-child(3),
+.casinos > ul > li > div:nth-child(3) {
+
+}
+.casinos > div > div:nth-child(4),
+.casinos > ul > li > div:nth-child(4) {
+
+}
+.casinos > div > div:nth-child(5),
+.casinos > ul > li > div:nth-child(5) {
+
+}
+.casinos > div > div:nth-child(6),
+.casinos > ul > li > div:nth-child(6) {
+
+}
+.casinos > div > div:nth-child(7),
+.casinos > ul > li > div:nth-child(7) {
+
+}
+.casinos > div > div:nth-child(8),
+.casinos > ul > li > div:nth-child(8) {
+
+}
+.casinos > div > div:nth-child(9),
+.casinos > ul > li > div:nth-child(9) {
+
+}
+.casinos__head {
+
+}
+.casinos__item {
+
+}
+/* ------------ /casinos ------------ */
