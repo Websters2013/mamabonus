@@ -18,13 +18,13 @@
 
 /* --------------- placeholder --------------- */
 ::-webkit-input-placeholder {
-    color: #000;
+    color: #ccc;
 }
 :-moz-placeholder {
-    color: #000;
+    color: #ccc;
 }
 .placeholder {
-    color: #000;
+    color: #ccc;
 }
 /* --------------- /placeholder --------------- */
 
@@ -72,15 +72,12 @@
 }
 .site__header {
     position: relative;
-
-    height: 100px;
-    background: red;
+    height: 45px;
+    border-bottom: 5px solid #0098ff;
+    background-color: #2d3e50;
+    box-shadow: 0 0 10px #777;
     z-index: 3;
-
 }
-/* --------------- /site --------------- */
-
-/* --------------- site__footer --------------- */
 .site__footer {
     z-index: 2;
     position: absolute;
@@ -128,15 +125,195 @@
     width: 100%;
     height: 100%;
 }
-/* --------------- /site__footer --------------- */
+/* --------------- /site --------------- */
 
 /* --------------- logo --------------- */
 .logo {
     position: absolute;
     top: 0;
+    left: 50%;
+    height: 45px;
+    margin-left: -112px;
+    padding-top: 9px;
+    padding-left: 62px;
+}
+.logo:before {
+    content: '';
+    position: absolute;
+    top: 0;
     left: 0;
+    width: 64px;
+    height: 40px;
+    background: url("../img/bg-header.png") no-repeat 0 -2px/63px 46px;
+}
+.logo img{
+    height: 100%;
 }
 /* --------------- /logo --------------- */
+
+/* --------------- header__menu --------------- */
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 45px;
+}
+.menu__wrap{
+    position: absolute;
+    top: 100%;
+    width: 133px;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+    -webkit-transition: opacity .3s ease, visibility .3s ease;
+    box-shadow: 1px 1px 1px #ccc;
+}
+.menu.active .menu__wrap{
+    opacity: 1;
+    visibility: visible;
+}
+.menu.active .menu__btn{
+    background: #0098ff;
+}
+.menu__btn {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 42px;
+    height: 34px;
+    padding: 0 11px 6px;
+    border: none;
+    border-radius: 2px 2px 0 0;
+    background: none;
+    transition: background .3s ease;
+    -webkit-transition: background .3s ease;
+}
+.menu__btn > span,
+.menu__btn > span:before,
+.menu__btn > span:after{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.menu__btn > span:before,
+.menu__btn > span:after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+.menu__btn > span:after {
+    top: 230%;
+}
+.menu__btn > span:before {
+    bottom: 240%;
+}
+/* --------------- header__menu --------------- */
+
+/* --------------- search --------------- */
+.search{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 45px;
+    cursor: pointer;
+}
+.search:before{
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 16px;
+    height: 17px;
+    background: url("../img/icon-search.png") no-repeat 0 0/16px 17px;
+    opacity: 1;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease
+}
+.search:hover:before{
+    opacity: 0;
+}
+.search__btn{
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 16px;
+    height: 17px;
+}
+.search__btn:before,
+.search__btn:after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    height: 14px;
+    border-left: 3px solid #0098ff;
+    border-radius: 10px;
+    opacity: 0;
+    transition: transform .4s ease, left .3s ease, height .3s ease, opacity .3s ease;
+    -webkit-transition: transform .4s ease, left .3s ease, height .3s ease, opacity .3s ease;
+}
+.search__btn:after{
+    left: 15px;
+}
+.search:hover .search__btn:before,
+.search:hover .search__btn:after{
+    left: 10px;
+    height: 17px;
+    opacity: 1;
+}
+.search:hover .search__btn:before{
+    transform: rotate(-45deg);
+}
+.search:hover .search__btn:after{
+    transform: rotate(45deg);
+}
+.search__frame{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 322px;
+    padding: 6px 13px 9px;
+    background-color: #919aa4;
+    cursor: default;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity.3s ease, visibility .3s ease;
+    -webkit-transition: opacity.3s ease, visibility .3s ease;
+}
+.search:hover .search__frame{
+    opacity: 1;
+    visibility: visible;
+}
+.search__frame input{
+    height: 29px;
+    width: 295px;
+    padding: 0 4px;
+    border: 1px solid #7d8d96;
+    border-radius: 2px;
+    font: 10px 'helvetica-regular', sans-serif;
+}
+.search__frame button{
+    position: absolute;
+    top: 6px;
+    right: 15px;
+    width: 20px;
+    height: 29px;
+    border: none;
+    background: url("../img/icon-search-black.png") no-repeat 0 5px/17px 18px;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+.search__frame button:hover{
+    opacity: .7;
+}
+/* --------------- /search --------------- */
 
 @media (min-width: 768px){
 
