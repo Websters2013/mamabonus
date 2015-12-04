@@ -163,24 +163,24 @@
     right: 0;
     top: 0;
     text-align: center;
-    /* padding-left: 7px; */
     height: 100%;
     width: 42px;
+    font-family: "helvetica-bold", sans-serif;
 }
 .casino-bonus__date span{
     display: block;
 }
 .casino-bonus__date .month{
-    font-size: 16px;
+    font-size: 14px;
     text-transform: lowercase;
-    margin-bottom: 0;
+    margin-bottom: 1px;
 }
 .casino-bonus__date .day{
-    font-size: 18px;
-    margin-bottom: 0;
+    font-size: 15px;
+    margin-bottom: 1px;
 }
 .casino-bonus__date .year{
-    font-size: 12px;
+    font-size: 10px;
 }
 .casino-bonus_image{
     width: 96px;
@@ -195,14 +195,16 @@
 .casino-bonus__game dl{
     overflow: hidden;
     padding-top: 14px;
-    font-size: 12px;
+    font-size: 10px;
     position: relative;
     left: -4px;
     width: 229px;
     display: inline-block;
+    font-family: "helvetica-regular", sans-serif;
+    margin-bottom: 2px;
 }
 .casino-bonus__game dl dt{
-    width: 145px;
+    width: 121px;
     display: inline-block;
     color: #000;
     margin-right: 13px;
@@ -210,38 +212,143 @@
 .casino-bonus__game dl dd{
     display: inline-block;
     color: #6a828a;
-    margin-bottom: 7px;
+    margin-bottom: 6px;
 }
 .casino-bonus__game .casino-bonus-code{
-    font-size: 15px;
+    font-size: 14px;
     border: 2px dashed #dcdfe8;
     background: #f8f8f8;
     margin-bottom: 20px;
-    padding: 6px;
+    padding: 4px;
     color: #000;
     position: relative;
-    margin-left: -114px;
+    margin-left: -97px;
     top: 1px;
+    font-family: "helvetica-bold", sans-serif;
+    letter-spacing: -0.7px;
 }
 .casino-bonus__game p{
     color: #6a828a;
     background-color: #f8f8f8;
-    font-size: 12px;
-    padding: 2px;
+    font-size: 10px;
+    padding: 9px;
+    padding-top: 5px;
+    padding-left: 10px;
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 9px;
+    word-spacing: 0.7px;
+    line-height: 12px;
+    padding-bottom: 6px;
+    margin-bottom: 7px;
 }
 .casino-bonus__game>span{
-    font-size: 15px;
-    margin-left: 21px;
+    font-size: 13px;
+    margin-left: 20px;
+    display: inline-block;
 }
 .casino-bonus__game .casino-bonus-status{
     color: #0098ff;
-    font-size: 15px;
+    margin-left: 7px;
+    font-size: 13px;
+    margin-bottom: 14px;
 }
 .casino-bonus-button{
     display: inline-block;
     width: 100%;
+    padding-left: 19px;
+    border-bottom: 1px dashed #6a828a;
+    padding-bottom: 11px;
+    margin-bottom: 16px;
+}
+.casino-bonus-like{
+    position: relative;
+    border: 3px solid #b5b9c7;
+    display: inline-block;
+    border-radius: 4px;
+    width: 110px;
+    height: 48px;
+    margin-bottom: 200px;
+    margin-left: 19px;
+    float: left;
+}
+.casino-bonus-like button{
+    border: none;
+    height: 100%;
+    border-radius: 8px;
+    background: #fff;
+    z-index: 0;
+    padding: 0;
+    width: 44%;
+}
+.casino-bonus-like .like{
+    background-image: url("../img/like.png");
+    background-size: 31px;
+    background-repeat: no-repeat;
+    background-position: 8px 2px;
+    border-right: 3px solid #b5b9c7;
+    border-radius: 0;
+    width: 52%;
+    position: relative;
+}
+.casino-bonus-like .like:after{
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 9px;
+    background-size: 28px 30px;
+    width: 31px;
+    height: 32px;
+    background-image: url("../img/like-hower.png");
+    background-repeat: no-repeat;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+.casino-bonus-like .dislike{
+    background-image: url("../img/dislike.png");
+    background-size: 31px;
+    background-repeat: no-repeat;
+    background-position: 11px 6px;
+    width: 47%;
+    margin-left: -5px;
+}
+.casino-bonus-like .dislike:after{
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    background-size: 28px 30px;
+    width: 31px;
+    height: 32px;
+    background-image: url("../img/dislike-hower.png");
+    background-repeat: no-repeat;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+.casino-bonus-like .like:hover:after{
+     opacity: 1;
+     -webkit-transition: opacity 0.3s ease;
+     transition: opacity 0.3s ease;
+ }
+.casino-bonus-like .dislike:hover:after{
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+.casino-bonus-review{
+    float: right;
+    font-family: "helvetica-regular", sans-serif;
+    position: relative;
+    top: -6px;
+    font-size: 13px;
+}
+.casino-bonus-review-number{
+    padding-left: 41px;
+    margin-bottom: 12px;
+}
+.casino-bonus-review-number>span{
+    margin-right: 3px;
 }
 /* --------------- /casino-bonus --------------- */
 
@@ -273,19 +380,23 @@
 /* --------------- btn --------------- */
 .btn{
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 12px;
     color: #fff;
     background: #b5b9c7;
-    border-radius: 6px;
-    width: 146px;
+    border-radius: 4px;
+    width: 125px;
     display: inline-block;
-    height: 39px;
+    height: 33px;
     text-align: center;
-    padding-top: 14px;
+    padding-top: 11px;
 }
 .btn_play{
     background: #dc2d26;
     float: right;
+    margin-right: 14px;
+}
+.btn_play:after{
+    content: " >>";
 }
 .btn:hover{
     background: #d9dce7;
@@ -296,6 +407,12 @@
     background: #f17b76;
     -webkit-transition: background 0.3s ease;
     transition: background 0.3s ease;
+}
+.btn_review{
+
+}
+.btn_review:hover{
+
 }
 /* --------------- /btn --------------- */
 
