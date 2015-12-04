@@ -362,6 +362,12 @@
 .menu__btn > span:before {
     bottom: 240%;
 }
+.menu dl{
+
+}
+.menu dt{
+    background-color: #0098ff;
+}
 /* --------------- header__menu --------------- */
 
 /* --------------- search --------------- */
