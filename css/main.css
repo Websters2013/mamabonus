@@ -170,30 +170,22 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 100%;
     height: 100%;
 }
-/* --------------- /site --------------- */
-
-/* --------------- casino-bonus --------------- */
-.casino-bonus{
-
-}
-.casino-bonus__item{
+.site__content-item{
     padding: 3px;
- }
-.casino-bonus__game{
-    overflow: hidden;
 }
-.casino-bonus__head{
+.site__content .site__content-head{
     background: #dcdfe8;
     position: relative;
     text-shadow: 1px 1px 0 #fff;
-}
-.casino-bonus__title{
     color: #0098ff;
-    font-size: 14px;
+    font-size: 15px;
     padding: 16px 0 15px 2px;
     font-family: "helvetica-medium", sans-serif;
+    border: none;
+    text-align: left;
+    text-transform: none;
 }
-.casino-bonus__date{
+.site__content-head time{
     color: #8fa0a5;
     border-left: 1px dashed #8fa0a5;
     font-weight: bold;
@@ -205,20 +197,26 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 42px;
     font-family: "helvetica-bold", sans-serif;
 }
-.casino-bonus__date span{
+.site__content-head time span{
     display: block;
 }
-.casino-bonus__date .month{
-    font-size: 14px;
+.site__content-head time .month{
     text-transform: lowercase;
     margin-bottom: 1px;
-}
-.casino-bonus__date .day{
     font-size: 15px;
-    margin-bottom: 1px;
+
 }
-.casino-bonus__date .year{
+
+.site__content-head time .year{
     font-size: 10px;
+    margin-top: 2px;
+
+}
+/* --------------- /site --------------- */
+
+/* --------------- casino-bonus --------------- */
+.casino-bonus__game{
+    overflow: hidden;
 }
 .casino-bonus_image{
     width: 96px;
@@ -401,6 +399,10 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 20px;
     background-size: 21px;
     background-repeat: no-repeat;
+}
+.casino-bonus-metr{
+    width: 200px;
+    height: 40px;
 }
 /* --------------- /casino-bonus --------------- */
 
