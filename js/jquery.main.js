@@ -17,7 +17,7 @@ $(function(){
             element_child.addClass('grey');
         }
 
-        else if (element_width>20&& element_width<=40){
+        else if (element_width>20&& element_width<=60){
             element_child.addClass('blue');
         }
 
