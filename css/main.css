@@ -232,6 +232,7 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-bottom: 9px;
     font-size: 14px;
     padding: 0 9px;
+    background: rgba(255,255,255,0.6);
 }
 .site__form textarea {
     height: 109px;
