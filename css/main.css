@@ -773,6 +773,10 @@ input[type="search"]::-webkit-search-cancel-button {
     .site__footer-layout li {
         margin-bottom: 18px;
     }
+    .site__content-layout {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
     /* --------------- /site --------------- */
 
     /* --------------- logo --------------- */
