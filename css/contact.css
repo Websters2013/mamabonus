@@ -10,11 +10,22 @@
 
 /* ------------ contacts ------------ */
 .contacts {
-    padding: 28px 15px 150px;
+    padding: 28px 15px 341px;
+    background: url("../img/contact-map.png") no-repeat center bottom;
+}
+.contacts:before {
+    content: '';
+    position: absolute;
+    background: url("../img/contact-bg.png") no-repeat;
+    width: 619px;
+    height: 321px;
+    bottom: -19px;
+    left: 14px;
+    background-size: contain;
 }
 .contacts__address {
     position: relative;
-    padding: 0 75px 26px 0;
+    padding: 0 75px 24px 0;
     font-style: normal;
     border-bottom: 1px solid #d3dadc;
 }
