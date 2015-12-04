@@ -70,6 +70,16 @@
     position: relative;
     z-index: 2;
 }
+.site__content h2{
+    font-size: 16px;
+    color: #6a828a;
+    text-align: center;
+    border: 1px dashed #6a828a;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: -0.6px;
+    padding: 10px 0;
+}
 .site__header {
     position: relative;
     height: 45px;
@@ -127,6 +137,115 @@
 }
 /* --------------- /site --------------- */
 
+/* --------------- casino-bonus --------------- */
+.casino-bonus{
+
+}
+.casino-bonus__item{
+    padding: 3px;
+ }
+.casino-bonus__head{
+    background: #dcdfe8;
+    position: relative;
+    text-shadow: 1px 1px 0 #fff;
+}
+.casino-bonus__title{
+    color: #0098ff;
+    font-size: 16px;
+    padding: 18px 0 13px 5px;
+}
+.casino-bonus__date{
+    color: #8fa0a5;
+    border-left: 1px dashed #8fa0a5;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    /* padding-left: 7px; */
+    height: 100%;
+    width: 42px;
+}
+.casino-bonus__date span{
+    display: block;
+}
+.casino-bonus__date .month{
+    font-size: 16px;
+    text-transform: lowercase;
+    margin-bottom: 0;
+}
+.casino-bonus__date .day{
+    font-size: 18px;
+    margin-bottom: 0;
+}
+.casino-bonus__date .year{
+    font-size: 12px;
+}
+.casino-bonus_image{
+    width: 96px;
+    float: left;
+    margin-top: 23px;
+    margin-left: -13px;
+    margin-right: 2px;
+}
+.casino-bonus_game{
+    position: relative;
+}
+.casino-bonus__game dl{
+    overflow: hidden;
+    padding-top: 14px;
+    font-size: 12px;
+    position: relative;
+    left: -4px;
+    width: 229px;
+    display: inline-block;
+}
+.casino-bonus__game dl dt{
+    width: 145px;
+    display: inline-block;
+    color: #000;
+    margin-right: 13px;
+}
+.casino-bonus__game dl dd{
+    display: inline-block;
+    color: #6a828a;
+    margin-bottom: 7px;
+}
+.casino-bonus__game .casino-bonus-code{
+    font-size: 15px;
+    border: 2px dashed #dcdfe8;
+    background: #f8f8f8;
+    margin-bottom: 20px;
+    padding: 6px;
+    color: #000;
+    position: relative;
+    margin-left: -114px;
+    top: 1px;
+}
+.casino-bonus__game p{
+    color: #6a828a;
+    background-color: #f8f8f8;
+    font-size: 12px;
+    padding: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.casino-bonus__game>span{
+    font-size: 15px;
+    margin-left: 21px;
+}
+.casino-bonus__game .casino-bonus-status{
+    color: #0098ff;
+    font-size: 15px;
+}
+.casino-bonus-button{
+    display: inline-block;
+    width: 100%;
+}
+/* --------------- /casino-bonus --------------- */
+
+/* --------------- logo --------------- */
+
 /* --------------- logo --------------- */
 .logo {
     position: absolute;
@@ -150,6 +269,35 @@
     height: 100%;
 }
 /* --------------- /logo --------------- */
+/* --------------- btn --------------- */
+.btn{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    background: #b5b9c7;
+    border-radius: 6px;
+    width: 146px;
+    display: inline-block;
+    height: 39px;
+    text-align: center;
+    padding-top: 14px;
+}
+.btn_play{
+    background: #dc2d26;
+    float: right;
+}
+.btn:hover{
+    background: #d9dce7;
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+}
+.btn_play:hover{
+    background: #f17b76;
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+}
+/* --------------- /btn --------------- */
+
 
 /* --------------- header__menu --------------- */
 .menu{
