@@ -80,13 +80,23 @@
     letter-spacing: -0.6px;
     padding: 10px 0;
 }
+.site__aside{
+    display: none;
+}
 .site__header {
     position: relative;
     height: 45px;
+    margin-bottom: 13px;
     border-bottom: 5px solid #0098ff;
     background-color: #2d3e50;
     box-shadow: 0 0 10px #777;
     z-index: 3;
+}
+.site__header-layout{
+    position: relative;
+    max-width: 960px;
+    height: inherit;
+    margin: 0 auto;
 }
 .site__footer {
     z-index: 2;
@@ -245,8 +255,6 @@
 /* --------------- /casino-bonus --------------- */
 
 /* --------------- logo --------------- */
-
-/* --------------- logo --------------- */
 .logo {
     position: absolute;
     top: 0;
@@ -269,6 +277,7 @@
     height: 100%;
 }
 /* --------------- /logo --------------- */
+
 /* --------------- btn --------------- */
 .btn{
     text-transform: uppercase;
@@ -297,7 +306,6 @@
     transition: background 0.3s ease;
 }
 /* --------------- /btn --------------- */
-
 
 /* --------------- header__menu --------------- */
 .menu{
@@ -371,21 +379,19 @@
 
 /* --------------- search --------------- */
 .search{
-    position: absolute;
-    top: 0;
-    right: 0;
+    float: right;
     width: 35px;
     height: 45px;
     cursor: pointer;
 }
 .search:before{
     content: '';
-    position: absolute;
-    top: 12px;
-    left: 10px;
-    width: 16px;
+    display: block;
+    margin-top: 12px;
+    margin-left: 9px;
+    width: 17px;
     height: 17px;
-    background: url("../img/icon-search.png") no-repeat 0 0/16px 17px;
+    background: url("../img/icon-search.png") no-repeat 0 0/17px 17px;
     opacity: 1;
     transition: opacity .3s ease;
     -webkit-transition: opacity .3s ease
@@ -394,9 +400,9 @@
     opacity: 0;
 }
 .search__btn{
-    position: absolute;
-    top: 12px;
-    left: 10px;
+    position: relative;
+    top: -16px;
+    left: 9px;
     width: 16px;
     height: 17px;
 }
@@ -431,8 +437,8 @@
 .search__frame{
     position: absolute;
     top: 100%;
+    left: 0;
     right: 0;
-    width: 322px;
     padding: 6px 13px 9px;
     background-color: #919aa4;
     cursor: default;
@@ -447,8 +453,8 @@
 }
 .search__frame input{
     height: 29px;
-    width: 295px;
-    padding: 0 4px;
+    width: 100%;
+    padding: 0 25px 0 4px;
     border: 1px solid #7d8d96;
     border-radius: 2px;
     font: 10px 'helvetica-regular', sans-serif;
@@ -471,7 +477,10 @@
 
 @media (min-width: 768px){
 
-    /* --------------- site__footer --------------- */
+    /* --------------- site --------------- */
+    .site__header {
+        height: 53px;
+    }
     .site__footer,
     .site__footer-layout {
         height: 280px;
@@ -495,10 +504,87 @@
     .site__footer-layout li {
         margin-bottom: 18px;
     }
-    /* --------------- /site__footer --------------- */
+    /* --------------- /site --------------- */
+
+    /* --------------- logo --------------- */
+    .logo {
+        height: 55px;
+        margin-left: -224px;
+        padding-top: 2px;
+        padding-left: 97px;
+    }
+    .logo:before {
+        width: 105px;
+        height: 48px;
+        background-position: 0 -8px;
+        background-size: 105px 71px;
+    }
+    /* --------------- /logo --------------- */
+
+    /* --------------- menu --------------- */
+    .menu{
+        height: 48px;
+    }
+    .menu__btn{
+        top: 8px;
+        left: 15px;
+        height: 40px;
+        width: 49px;
+        padding: 0 13px 5px;
+    }
+    .menu__btn > span,
+    .menu__btn > span:before,
+    .menu__btn > span:after{
+        height: 3px;
+    }
+    /* --------------- /menu --------------- */
+
+    /* --------------- search --------------- */
+    .search{
+        width: 215px;
+    }
+    .search:before,
+    .search__btn{
+        display: none;
+    }
+    .search__frame{
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding: 5px 18px 9px 13px;
+        background-color: transparent;
+        opacity: 1;
+        visibility: visible;
+    }
+    .search__frame input{
+        height: 36px;
+        font-size: 12px;
+        padding: 0 5px;
+    }
+    .search__frame button {
+        top: 5px;
+        right: 19px;
+        width: 23px;
+        height: 29px;
+        background-size: 18px 19px;
+    }
+    /* --------------- /search --------------- */
 }
+
 @media (min-width: 950px){
-    /* --------------- site__footer --------------- */
+    /* --------------- site --------------- */
+    .site__header{
+        height: 61px;
+        border-bottom-width: 3px;
+    }
+    .site__aside{
+        display: block;
+        float: left;
+        width: 208px;
+        margin-right: 20px;
+        box-shadow: 0 5px;
+    }
     .site__footer,
     .site__footer-layout {
         height: 186px;
@@ -544,5 +630,63 @@
         margin-left: 256px;
         text-align: left;
     }
-    /* --------------- /site__footer --------------- */
+    /* --------------- /site --------------- */
+
+    /* --------------- logo --------------- */
+    .logo{
+        position: absolute;
+        top: 17px;
+        left: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .logo:before{
+        width: 208px;
+        height: 182px;
+        background: url("../img/logo-big.png") no-repeat 6px 4px/194px 178px;
+    }
+    .logo img{
+        display: none;
+    }
+    /* --------------- /logo --------------- */
+
+    /* --------------- menu --------------- */
+    .menu{
+        margin-top: 6px;
+        margin-left: 210px;
+    }
+    .menu__btn{
+        display: none;
+    }
+    .menu__wrap{
+        position: static;
+        width: auto;
+        background: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu__wrap a{
+        display: inline-block;
+        padding-top: 19px;
+        font-size: 18px;
+        color: #0098ff;
+    }
+    .menu__wrap .aside__layout{
+        display: none;
+    }
+    /* --------------- /menu --------------- */
+
+    /* --------------- search --------------- */
+    .search__frame{
+        padding: 13px 0 9px 53px;
+    }
+    .search__frame button {
+        top: 14px;
+        right: 3px;
+        width: 26px;
+        height: 28px;
+        background-size: 22px 23px;
+    }
+    /* --------------- /search --------------- */
 }
