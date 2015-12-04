@@ -63,8 +63,7 @@
     display: block;
     clear: both;
     width: 100%;
-
-    height: 100px;
+    height: 153px;
 }
 .site__content {
     position: relative;
@@ -637,6 +636,9 @@
     .site__header {
         height: 53px;
     }
+    .site:after{
+        height: 280px;
+    }
     .site__footer,
     .site__footer-layout {
         height: 280px;
@@ -740,8 +742,11 @@
         width: 208px;
         height: 500px;
         margin-right: 20px;
-        box-shadow: 0 5px;
+        box-shadow: 0 0 7px #ccc;
         background-color: #fff;
+    }
+    .site:after{
+        height: 186px;
     }
     .site__footer,
     .site__footer-layout {
