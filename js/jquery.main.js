@@ -1,6 +1,6 @@
 $(function(){
 
-    $('.menu__btn').on({
+    $('.menu__btn').({
         'click':function(){
             var curElem = $(this).parent();
 
