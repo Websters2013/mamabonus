@@ -68,6 +68,8 @@
 }
 .site__content {
     position: relative;
+    max-width: 960px;
+    margin: 0 auto;
     z-index: 2;
 }
 .site__content h2{
@@ -79,6 +81,14 @@
     text-transform: uppercase;
     letter-spacing: -0.6px;
     padding: 10px 0;
+}
+.site__content-layout{
+    overflow: hidden;
+}
+.site__content-layout:after{
+    content: '';
+    display: block;
+    clear: both;
 }
 .site__aside{
     display: none;
@@ -105,12 +115,15 @@
     right: 0;
     bottom: 0;
     height: 153px;
+    box-shadow: 0 -13px 30px #eaeaea;
 }
 .site__footer-layout {
+    position: relative;
     width: 100%;
-    height: 153px;
-    background: #fff;
-    box-shadow: 0 -13px 30px #eaeaea;
+    max-width: 960px;
+    margin: 0 auto;
+    height: inherit;
+    background-color: #fff;
     padding-top: 15px;
 }
 .site__footer-menu{
@@ -583,8 +596,10 @@
         display: block;
         float: left;
         width: 208px;
+        height: 500px;
         margin-right: 20px;
         box-shadow: 0 5px;
+        background-color: #fff;
     }
     .site__footer,
     .site__footer-layout {
