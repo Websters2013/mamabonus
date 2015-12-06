@@ -6,59 +6,350 @@
 
     casinos
 
+    casinos-device
+
 */
 
 /* ------------ casinos ------------ */
-.casinos {
 
+.casinos {
+    margin-bottom: 23px;
+    padding: 0 10px;
 }
 .casinos > div {
-
+    overflow: hidden;
 }
 .casinos > div > div,
 .casinos > ul > li > div {
-
+    margin-bottom: 20px;
 }
 .casinos > div > div:nth-child(1),
 .casinos > ul > li > div:nth-child(1) {
-
+    position: absolute;
+    width: 24px;
+    top: 9px;
+    left: 5px;
+    color: #0098ff !important;
 }
-.casinos > div > div:nth-child(2),
-.casinos > ul > li > div:nth-child(2) {
-
+.casinos > ul {
+    counter-reset: items;
 }
-.casinos > div > div:nth-child(3),
-.casinos > ul > li > div:nth-child(3) {
-
-}
-.casinos > div > div:nth-child(4),
-.casinos > ul > li > div:nth-child(4) {
-
-}
-.casinos > div > div:nth-child(5),
-.casinos > ul > li > div:nth-child(5) {
-
-}
-.casinos > div > div:nth-child(6),
-.casinos > ul > li > div:nth-child(6) {
-
-}
-.casinos > div > div:nth-child(7),
-.casinos > ul > li > div:nth-child(7) {
-
-}
-.casinos > div > div:nth-child(8),
-.casinos > ul > li > div:nth-child(8) {
-
-}
-.casinos > div > div:nth-child(9),
-.casinos > ul > li > div:nth-child(9) {
-
+.casinos > ul > li {
+    counter-increment: items;
 }
 .casinos__head {
-
+    display: none;
+}
+.casinos__head > div {
+    font-family: 'helvetica-regular', sans-serif;
+    color: #2d3e50;
+    font-size: 15px;
+    height: 24px !important;
+    padding: 0 0 3px 0;
 }
 .casinos__item {
-
+    position: relative;
+    font-family: 'helvetica-light', sans-serif;
+    font-size: 14px;
+    color: #6a828a;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 10px 0 0 30px;
+}
+.casinos__item {
+    border: 2px solid #f8f8f8;
+    border-radius: 3px;
+    box-shadow: 4px 4px 9px -1px rgba(0,0,0, .16);
+}
+.casinos__item-inner > div {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+.casinos__item-title {
+    color: #0098ff;
+    font-size: 16px;
+}
+.casinos__item-number div:before {
+    content: counter(items);
+    font-size: 14px;
+}
+.casinos__item-title > div img {
+    height: auto;
+}
+.casinos__item-pic {
+    display: inline-block;
+    vertical-align: top;
+}
+.casinos__item-pic > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+.casinos__item-pic + span {
+    display: block;
+}
+.casinos__item-pic + span a {
+    color: #0098ff;
+    -webkit-transition: text-shadow .3s ease-in-out;
+    transition: text-shadow .3s ease-in-out;
+}
+.casinos__item-pic:hover + span > a,
+.casinos__item-pic + span a:hover {
+    text-shadow: 0 0 3px #0098ff;
+}
+.casinos__item-flag img {
+    width: 32px;
+    border: 1px solid #e4e4e4;
+}
+.casinos__item-review .btn {
+    position: relative;
+    left: 1px;
+    top: -2px;
+    width: 69px;
+    height: 21px;
+    border: 2px solid #0098ff;
+    padding-top: 4px;
+    font-size: 11px;
+    background: transparent;
+}
+.casinos__item-review .btn:hover {
+    background: #94d0f9;
+}
+.casinos__mobile-title {
+    display: inline-block !important;
+    vertical-align: top;
+    color: #2d3e50;
+    font-size: 16px;
+    font-family: 'helvetica-bold', sans-serif;
+    width: 45%;
 }
 /* ------------ /casinos ------------ */
+
+/*-------------casinos-device------------*/
+.casinos-device__android,
+.casinos-device__apple {
+    display: inline-block;
+    vertical-align: top;
+    text-indent: 100%;
+    overflow: hidden;
+    margin: 0 2px;
+}
+.casinos-device__android {
+    width: 20px;
+    height: 23px;
+    background: url(../img/device-icon_sprite.png) 100% 0 no-repeat;
+    background-size: 45px 23px;
+}
+.casinos-device__apple {
+    width: 19px;
+    height: 25px;
+    background: url(../img/device-icon_sprite.png) no-repeat;
+    background-size: 45px 23px;
+}
+/*-------------/casinos-device------------*/
+
+@media (min-width: 768px) {
+
+    /* ------------ casinos ------------ */
+    .site__content-layout_casinos {
+        position: relative;
+    }
+    .casinos {
+        padding: 0;
+        width: 715px;
+        margin: 0 auto 23px;
+    }
+    .casinos > div {
+        display: block;
+    }
+    .casinos > div > div,
+    .casinos > ul > li > div {
+        border-left: 1px solid #d8dae2;
+        display: table;
+        float: left;
+        height: 63px;
+        vertical-align: middle;
+        text-align: center;
+        margin: 0 0 0 0;
+    }
+    .casinos > div > div:last-child,
+    .casinos > ul > li > div:last-child {
+        border-right: 1px solid #d8dae2;
+    }
+    .casinos > div > div:nth-child(1),
+    .casinos > ul > li > div:nth-child(1) {
+        width: 3.7%;
+        position: relative;
+        top: 0;
+        left: 0;
+        color: #6a828a !important;
+    }
+    .casinos > div > div:nth-child(2),
+    .casinos > ul > li > div:nth-child(2) {
+        width: 10.4%;
+    }
+    .casinos > div > div:nth-child(3),
+    .casinos > ul > li > div:nth-child(3) {
+        width: 17%;
+    }
+    .casinos > div > div:nth-child(4),
+    .casinos > ul > li > div:nth-child(4) {
+        width: 7.3%;
+    }
+    .casinos > div > div:nth-child(5),
+    .casinos > ul > li > div:nth-child(5) {
+        width: 10%;
+    }
+    .casinos > div > div:nth-child(6),
+    .casinos > ul > li > div:nth-child(6) {
+        width: 12.3%;
+    }
+    .casinos > div > div:nth-child(7),
+    .casinos > ul > li > div:nth-child(7) {
+        width: 10.4%;
+    }
+    .casinos > div > div:nth-child(8),
+    .casinos > ul > li > div:nth-child(8) {
+        width: 11.5%;
+    }
+    .casinos > div > div:nth-child(9),
+    .casinos > ul > li > div:nth-child(9) {
+        width: 17.9%;
+    }
+    .casinos > ul > li {
+        border: none;
+        border-bottom: 1px solid #d8dae2;
+    }
+    .casinos > ul > li:first-child {
+        border-top: 2px dotted#d8dae2;
+    }
+    .casinos__head > div {
+        font-family: 'helvetica-regular', sans-serif;
+        color: #2d3e50;
+        font-size: 15px;
+        height: 24px !important;
+        padding: 0 0 3px 0;
+    }
+    .casinos__item {
+        padding: 0;
+        margin-bottom: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .casinos__item:nth-child(odd) {
+        background: #f5f6f9;
+    }
+    .casinos__item-inner {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .casinos__item-title {
+        color: #0098ff;
+        font-size: 12px;
+    }
+    .casinos__item-number div:before {
+        font-size: 13px;
+    }
+    .casinos__item-pic {
+        height: 45px;
+        display: table;
+        width: 100%;
+        vertical-align: middle;
+    }
+    .casinos__item-pic > div {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .casinos__item-pic + span {
+        width: 73px;
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .casinos__item-bonus span {
+        display: block;
+    }
+    .casinos__item-inner > div {
+        width: 100%;
+    }
+    .casinos__mobile-title {
+        display: none !important;
+    }
+    /* ------------ /casinos ------------ */
+
+    /*-------------casinos-device------------*/
+    .casinos-device__android,
+    .casinos-device__apple {
+        display: inline-block;
+        vertical-align: top;
+        text-indent: 100%;
+        overflow: hidden;
+        margin: 0 2px;
+    }
+    .casinos-device__android {
+        width: 20px;
+        height: 23px;
+        background: url(../img/device-icon_sprite.png) 100% 0 no-repeat;
+        background-size: 45px 23px;
+    }
+    .casinos-device__apple {
+        width: 19px;
+        height: 25px;
+        background: url(../img/device-icon_sprite.png) no-repeat;
+        background-size: 45px 23px;
+    }
+    /*-------------/casinos-device------------*/
+
+}
+
+@media (min-width: 950px) {
+
+    /* ------------ casinos ------------ */
+    .site__content-layout_casinos {
+        position: relative;
+        left: -4px;
+        padding-left: 0;
+        padding-right: 8px;
+    }
+    .casinos {
+        margin: 0 0 23px;
+        width: 700px;
+    }
+    .casinos > div > div:last-child,
+    .casinos > ul > li > div:last-child {
+        border-right: 1px solid #d8dae2;
+    }
+    .casinos > div > div:nth-child(2),
+    .casinos > ul > li > div:nth-child(2) {
+        width: 10.7%;
+    }
+    .casinos > div > div:nth-child(3),
+    .casinos > ul > li > div:nth-child(3) {
+        width: 17.2%;
+    }
+    .casinos > div > div:nth-child(9),
+    .casinos > ul > li > div:nth-child(9) {
+        width: 17.5%;
+    }
+    /* ------------ /casinos ------------ */
+
+}
+
+@media (min-width: 1024px) {
+
+    /* ------------ casinos ------------ */
+    .casinos {
+        width: auto;
+    }
+    .casinos > div > div:nth-child(2),
+    .casinos > ul > li > div:nth-child(2) {
+        width: 10.3%;
+    }
+    .casinos > div > div:nth-child(3),
+    .casinos > ul > li > div:nth-child(3) {
+        width: 17.6%;
+    }
+    /* ------------ /casinos ------------ */
+
+}

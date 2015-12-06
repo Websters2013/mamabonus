@@ -20,6 +20,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
     social-2
 
+    pagination
 
     casino-info
 */
@@ -751,6 +752,71 @@ input[type="search"]::-webkit-search-cancel-button {
 .social-2 a.social-2__tw {background: url("../img/social-2__tw.png")}
 .social-2 a.social-2__pi {background: url("../img/social-2__p.png")}
 /* ------------ /social-2 ------------ */
+
+/*--------------pagination--------------*/
+.pagination {
+    text-align: center;
+    padding: 0 18px 0 0;
+    margin-bottom: 21px;
+}
+.pagination li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1px;
+}
+.pagination li a {
+    font-size: 18px;
+    line-height: 33px;
+    font-family: 'helvetica-light', sans-serif;
+    color: #9096a5;
+    -webkit-transition: color .3s ease-in-out;
+    transition: color .3s ease-in-out;
+}
+.pagination li a:hover {
+    color: #0098ff;
+}
+.pagination li a.active {
+    position: relative;
+    top: -1px;
+    font-size: 19px;
+    color: #0098ff;
+    font-family: 'helvetica-medium', sans-serif;
+}
+.pagination__prev,
+.pagination__next {
+    position: relative;
+    left: -4px;
+    display: inline-block;
+    vertical-align: top;
+    width: 29px;
+    height: 29px;
+    border: 1px solid #0098ff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: url(../img/blue-arrow.png) center no-repeat;
+    background-size: 9px 15px;
+    -webkit-transition: transform .3s ease-in-out !important;
+    transition: transform .3s ease-in-out !important;
+}
+.pagination__next {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    left: 4px;
+}
+.pagination__prev:hover {
+    -webkit-transform: translateX(-3px);
+    -ms-transform: translateX(-3px);
+    transform: translateX(-3px);
+}
+.pagination__next:hover {
+    -webkit-transform: translateX(3px) rotate(180deg);
+    -ms-transform: translateX(3px) rotate(180deg);
+    transform: translateX(3px) rotate(180deg);
+}
+
+/*--------------/pagination--------------*/
 
 @media (min-width: 768px){
 
