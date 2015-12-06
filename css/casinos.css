@@ -178,7 +178,7 @@
     }
     .casinos > div > div:nth-child(1),
     .casinos > ul > li > div:nth-child(1) {
-        width: 3.7%;
+        width: 26px;
         position: relative;
         top: 0;
         left: 0;
@@ -186,35 +186,35 @@
     }
     .casinos > div > div:nth-child(2),
     .casinos > ul > li > div:nth-child(2) {
-        width: 10.4%;
+        width: 74px;
     }
     .casinos > div > div:nth-child(3),
     .casinos > ul > li > div:nth-child(3) {
-        width: 17%;
+        width: 121px;
     }
     .casinos > div > div:nth-child(4),
     .casinos > ul > li > div:nth-child(4) {
-        width: 7.3%;
+        width: 52px;
     }
     .casinos > div > div:nth-child(5),
     .casinos > ul > li > div:nth-child(5) {
-        width: 10%;
+        width: 71px;
     }
     .casinos > div > div:nth-child(6),
     .casinos > ul > li > div:nth-child(6) {
-        width: 12.3%;
+        width: 87px;
     }
     .casinos > div > div:nth-child(7),
     .casinos > ul > li > div:nth-child(7) {
-        width: 10.4%;
+        width: 74px;
     }
     .casinos > div > div:nth-child(8),
     .casinos > ul > li > div:nth-child(8) {
-        width: 11.5%;
+        width: 82px;
     }
     .casinos > div > div:nth-child(9),
     .casinos > ul > li > div:nth-child(9) {
-        width: 17.9%;
+        width: 128px;
     }
     .casinos > ul > li {
         border: none;
@@ -322,15 +322,15 @@
     }
     .casinos > div > div:nth-child(2),
     .casinos > ul > li > div:nth-child(2) {
-        width: 10.7%;
+        width: 74px;
     }
     .casinos > div > div:nth-child(3),
     .casinos > ul > li > div:nth-child(3) {
-        width: 17.2%;
+        width: 112px;
     }
     .casinos > div > div:nth-child(9),
     .casinos > ul > li > div:nth-child(9) {
-        width: 17.5%;
+        width: 122px;
     }
     /* ------------ /casinos ------------ */
 
@@ -342,13 +342,29 @@
     .casinos {
         width: auto;
     }
-    .casinos > div > div:nth-child(2),
-    .casinos > ul > li > div:nth-child(2) {
-        width: 10.3%;
-    }
     .casinos > div > div:nth-child(3),
     .casinos > ul > li > div:nth-child(3) {
-        width: 17.6%;
+        width: 127px;
+    }
+    .casinos > div > div:nth-child(5),
+    .casinos > ul > li > div:nth-child(5) {
+        width: 72px;
+    }
+    .casinos > div > div:nth-child(6),
+    .casinos > ul > li > div:nth-child(6) {
+        width: 89px;
+    }
+    .casinos > div > div:nth-child(7),
+    .casinos > ul > li > div:nth-child(7) {
+        width: 75px;
+    }
+    .casinos > div > div:nth-child(8),
+    .casinos > ul > li > div:nth-child(8) {
+        width: 83px;
+    }
+    .casinos > div > div:nth-child(9),
+    .casinos > ul > li > div:nth-child(9) {
+        width: 126px;
     }
     /* ------------ /casinos ------------ */
 
