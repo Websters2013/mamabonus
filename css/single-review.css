@@ -76,7 +76,7 @@
     text-decoration: underline;
 }
 .comment__btns{
-
+    text-align: center;
 }
 .comment__btns .btn_review{
     left: auto;
@@ -99,12 +99,197 @@
 
 /* --------------- casino-info --------------- */
 .casino-info{
-
+    overflow: hidden;
 }
 .casino-info h2{
     color: #2d3e50;
     font-size: 20px;
     line-height: 22px;
+}
+.casino-info__secondary{
+    text-align: right;
+    padding: 0 5px 29px 0;
+    overflow: hidden;
+}
+.casino-info__secondary .btn {
+    font-size: 13px;
+    line-height: 13px;
+    width: 137px;
+    height: 37px;
+    padding-top: 12px;
+}
+.casino-info__logo{
+    border: 1px solid #e9e8e8;
+    border-radius: 5px;
+    width: 137px;
+    height: 118px;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+.casino-info__logo>div{
+    display: table;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+}
+.casino-info__logo>div>div{
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+    height: 40px;
+    padding: 0 24px;
+}
+.casino-info__logo img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.casino-info__main{
+    color: #6a828a;
+    font-size: 14px;
+    line-height: 17px;
+    position: relative;
+}
+.casino-info__main:before{
+    content: '';
+    position: absolute;
+    background: url("../img/casino-info-border.png") repeat-x left top;
+    height: 2px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.casino-info__main p{
+    font-family: "helvetica-light", sans-serif;
+    margin: 0 0 10px;
+}
+.casino-info__main h3{
+    color: #2d3e50;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0 0 5px;
+    text-transform: uppercase;
+}
+.casino-info__main-item{
+    position: relative;
+    padding: 15px 0 15px 95px;
+    min-height: 90px;
+}
+.casino-info__main-item:before{
+    content: '';
+    position: absolute;
+    background: url("../img/casino-info-border.png") repeat-x left top;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.casino-info__main-item:after{
+    content: '';
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+}
+.casino-info__main-item:nth-child(1):after{
+    background-image: url("../img/casino-info1.png");
+    width: 77px;
+    height: 63px;
+    top: 33px;
+    left: 0;
+}
+.casino-info__main-item:nth-child(2):after{
+    background-image: url("../img/casino-info2.png");
+    width: 77px;
+    height: 56px;
+    top: 23px;
+    left: 0;
+}
+.casino-info__main-item:nth-child(3):after{
+    background-image: url("../img/casino-info3.png");
+    width: 78px;
+    height: 46px;
+    top: 19px;
+    left: 0;
+}
+.casino-info__main-item:nth-child(4):after{
+    background-image: url("../img/casino-info4.png");
+    width: 74px;
+    height: 59px;
+    top: 19px;
+    left: 3px;
+}
+.casino-info__main-item:nth-child(5):after{
+    background-image: url("../img/casino-info5.png");
+    width: 69px;
+    height: 50px;
+    top: 16px;
+    left: 4px;
+}
+.casino-info__main-item:nth-child(6):after{
+    background-image: url("../img/casino-info6.png");
+    width: 70px;
+    height: 70px;
+    top: 22px;
+    left: 1px;
+}
+.casino-info__main-item:nth-child(7):after{
+    background-image: url("../img/casino-info7.png");
+    width: 68px;
+    height: 69px;
+    top: 13px;
+    left: 5px;
+}
+.casino-info__main-item:nth-child(8):after{
+    background-image: url("../img/casino-info8.png");
+    width: 63px;
+    height: 56px;
+    top: 29px;
+    left: 5px;
+}
+.casino-info__main-item:nth-child(9):after{
+    background-image: url("../img/casino-info9.png");
+    width: 68px;
+    height: 61px;
+    top: 20px;
+    left: 1px;
+}
+.casino-info__price{
+    color: #dc2d26;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: "helvetica-medium", sans-serif;
+
+}
+.casino-info__price img{
+    display: inline-block;
+    vertical-align: middle;
+}
+.casino-info__support a{
+    display: inline-block;
+    vertical-align: top;
+    font-family: "helvetica-medium", sans-serif;
+    padding: 0 0 0 30px;
+}
+.casino-info__tel{
+    color: #2d3e50;
+    background: url("../img/support-tel.png") no-repeat left top;
+    background-size: 33px;
+}
+.casino-info__mail{
+    color: #0098ff;
+    background: url("../img/support-mail.png") no-repeat left top;
+    background-size: 32px;
+}
+.casino-info__currencies img{
+    display: inline-block;
+    vertical-align: top;
+    width: 28px;
+    height: 28px;
+    margin-right: 4px;
 }
 /* --------------- /casino-info --------------- */
 
@@ -154,6 +339,89 @@
         padding-top: 12px;
     }
     /* --------------- /comment --------------- */
+
+    /* --------------- casino-info --------------- */
+    .casino-info__secondary{
+        float: left;
+        width: 20%;
+    }
+    .casino-info__logo{
+        width: 100px;
+        height: 100px;
+    }
+    .casino-info__main{
+        float: left;
+        width: 80%;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .casino-info__main p{
+        margin: 0 0 10px;
+    }
+    .casino-info__main h3{
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0 0 10px;
+    }
+    .casino-info__main-item:nth-child(1):after{
+        width: 91px;
+        height: 75px;
+        top: 0;
+        left: 0;
+    }
+    .casino-info__main-item:nth-child(2):after{
+        width: 90px;
+        height: 66px;
+        top: 0;
+        left: 0;
+    }
+    .casino-info__main-item:nth-child(3):after{
+        width: 90px;
+        height: 54px;
+        top: 0;
+        left: 0;
+    }
+    .casino-info__main-item:nth-child(4):after{
+        width: 88px;
+        height: 70px;
+        top: 0;
+        left: 0;
+    }
+    .casino-info__main-item:nth-child(5):after{
+        width: 80px;
+        height: 58px;
+        top: 0;
+        left: 0;
+    }
+    .casino-info__main-item:nth-child(6):after{
+        width: 81px;
+        height: 81px;
+        top: 0;
+        left: 0;
+    }
+    .casino-info__main-item:nth-child(7):after{
+        width: 79px;
+        height: 80px;
+        top: 0;
+        left: 0;
+    }
+    .casino-info__main-item:nth-child(8):after{
+        width: 74px;
+        height: 66px;
+        top: 0;
+        left: 0;
+    }
+    .casino-info__main-item:nth-child(9):after{
+        width: 79px;
+        height: 71px;
+        top: 0;
+        left: 0;
+    }
+    .casino-info__currencies img{
+        width: 37px;
+        height: 37px;
+    }
+    /* --------------- /casino-info --------------- */
 
 }
 
