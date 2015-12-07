@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+/*
+    contacts styles
+    version: 04.12.2015
+
+    game
+
+*/
+
+/*------------game------------*/
+.game {
+
+}
+.game__mobile-support {
+    position: relative;
+    display: block;
+    font-family: 'helvetica-medium', sans-serif;
+    font-size: 12px;
+    line-height: 13px;
+    color: #2d3e50;
+    background: #fee3e2;
+    padding: 9px 6px 10px;
+    margin-bottom: 10px;
+    letter-spacing: -0.4px;
+}
+.game__mobile-support:after,
+.game__mobile-support:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: url(../img/casino-info-border.png) repeat-x;
+}
+.game__mobile-support:after {
+    top: auto;
+    bottom: 0;
+}
+.game__main {
+    width: 100%;
+    margin-bottom: 12px;
+}
+.game__main img {
+    width: 100%;
+}
+.game__list {
+
+}
+.game__list h3 {
+    font-family: 'helvetica-light', sans-serif;
+    color: #0098ff;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+.game__list ul {
+    text-align: center;
+    padding: 0 3px 0 0;
+}
+.game__list ul:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+.game__item {
+    display: inline-block;
+    vertical-align: top;
+    border-right: 1px solid #f8f8f8;
+    border-radius: 3px;
+    box-shadow: 3px 3px 7px 2px rgba(0,0,0,0.16);
+    width: 258px;
+    height: 212px;
+    text-align: center;
+    padding: 4px;
+    margin-bottom: 21px;
+}
+.game__item a {
+    color: #0098ff;
+    font-size: 16px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.game__item-pic {
+    position: relative;
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.16);
+    margin-bottom: 21px;
+}
+.game__item-pic:hover div {
+    opacity: 1;
+    visibility: visible;
+    background: rgba( 255, 255, 255, .6 );
+}
+.game__item-pic img {
+    display: block;
+    width: 100%;
+}
+.game__item-pic div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity .3s ease-in-out, visibility .3s ease-in-out, background .3s ease-in-out;
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out, background .3s ease-in-out;
+}
+.game__item-pic div a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -21px 0 0 -84px;
+    width: 168px;
+    height: 43px;
+    padding: 14px 0 0;
+    font-size: 17px;
+}
+/*------------/game------------*/
+
+@media (min-width: 768px) {
+
+    /*------------game------------*/
+    .game__mobile-support {
+        font-size: 13px;
+        padding: 18px 6px 18px;
+        margin-bottom: 31px;
+        letter-spacing: 0.1px;
+    }
+    .game__main {
+        margin-bottom: 21px;
+    }
+    .game__list h3 {
+        font-size: 23px;
+        margin-bottom: 19px;
+        letter-spacing: -0.2px;
+    }
+    .game__list ul {
+        text-align: justify;
+    }
+    .game__list ul:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+    .game__item {
+        width: 231px;
+        height: 186px;
+        padding: 4px;
+    }
+    .game__item a {
+        font-size: 16px;
+        -webkit-transition: text-shadow .3s ease-in-out;
+        transition: text-shadow .3s ease-in-out;
+    }
+    .game__item a:hover {
+        text-shadow: 0 0 2px #0098ff;
+    }
+    .game__item-pic {
+        margin-bottom: 15px;
+    }
+    /*------------/game------------*/
+
+}
+
+@media (min-width: 950px) {
+
+    /*------------game------------*/
+    .game__mobile-support {
+        display: none;
+    }
+    .game__main {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .game__list h3 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+    .game__item {
+        width: 227px;
+        height: 182px;
+    }
+    .game__item a {
+        font-size: 16px;
+    }
+    .game__item-pic {
+        margin-bottom: 14px;
+    }
+    /*------------/game------------*/
+
+}
+
+@media (min-width: 1024px) {
+
+
+
+}
