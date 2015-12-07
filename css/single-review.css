@@ -14,6 +14,7 @@
 
     latest-bonuses
 
+    casino-review
 
 */
 
@@ -510,7 +511,7 @@
 
 /* --------------- latest-bonuses --------------- */
 .latest-bonuses{
-
+    margin: 0 0 26px;
 }
 .latest-bonuses h2{
     color: #2d3e50;
@@ -576,6 +577,87 @@
     text-decoration: none;
 }
 /* --------------- /latest-bonuses --------------- */
+
+/* --------------- casino-review --------------- */
+.casino-review{
+    margin: 0 0 24px;
+}
+.casino-review .comment__item{
+    display: none;
+}
+.casino-review h2{
+    color: #2d3e50;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: normal;
+    margin: 0 0 24px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0 0 15px;
+}
+.casino-review h2:before {
+    content: '';
+    position: absolute;
+    background: url("../img/casino-info-border.png") repeat-x left top;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.casino-review__add{
+    text-align: center;
+}
+.casino-review__add input[type="text"],
+.casino-review__add textarea{
+    width: 215px;
+    height: 37px;
+    padding: 9px 9px;
+    border: 1px solid #d3dadc;
+    font-size: 16px;
+    line-height: 16px;
+    color: #575757;
+    font-family: "helvetica-light", sans-serif;
+    margin-bottom: 21px;
+    border-radius: 2px;
+}
+.casino-review__add textarea{
+    padding: 8px 17px;
+    height: 165px;
+    width: 100%;
+    margin: 0 0 1px;
+}
+.casino-review__add .btn_review{
+    width: 154px;
+    height: 30px;
+    padding-top: 3px;
+}
+.casino-review__rate{
+    color: #2d3e50;
+    font-size: 13px;
+    line-height: 17px;
+    font-family: "helvetica-light", sans-serif;
+}
+.casino-review__rate h3{
+    color: #dc2d26;
+    font-weight: normal;
+    margin-bottom: 21px;
+    font-size: 25px;
+    line-height: 28px;
+}
+.casino-review__rate span{
+    color: #6a828a;
+}
+.casino-review__rating-wrap{
+
+}
+.casino-review__rating{
+
+}
+.casino-review__rating>div{
+    display: inline-block;
+    vertical-align: top;
+}
+/* --------------- /casino-review --------------- */
 
 @media (min-width: 768px){
 
@@ -782,8 +864,8 @@
 
     /* --------------- packages --------------- */
     .packages{
-        overflow: hidden;
         padding: 0 339px 0 0;
+        margin: 0 0 60px;
     }
     .packages h2{
         font-size: 20px;
@@ -856,16 +938,29 @@
     }
     .packages__rate {
         position: absolute;
-        top: 63px;
-        right: 0;
+        top: 58px;
+        right: -19px;
         padding: 0;
         width: 315px;
+        font-size: 25px;
+        line-height: 32px;
+    }
+    .packages__rate span {
+        width: 190px;
+    }
+    .packages__rate>div {
+        width: 296px;
+        height: 753px;
+        font-size: 19px;
+        line-height: 19px;
+        padding: 731px 142px 0 24px;
+        margin: 0 0 20px 18px;
     }
     /* --------------- /packages --------------- */
 
     /* --------------- latest-bonuses --------------- */
-    .latest-bonuses{
-
+    .latest-bonuses {
+        margin: 0 0 41px;
     }
     .latest-bonuses h2{
         font-size: 20px;
@@ -901,6 +996,46 @@
         padding: 28px 1px 0 0;
     }
     /* --------------- /latest-bonuses --------------- */
+
+    /* --------------- casino-review --------------- */
+    .casino-review {
+        margin: 0 0 39px;
+    }
+    .casino-review h2{
+        font-size: 20px;
+        line-height: 23px;
+        margin: 0 0 20px;
+        padding: 0 0 30px;
+    }
+    .casino-review__add input[type="text"], .casino-review__add textarea {
+        width: 253px;
+        height: 43px;
+        padding: 9px 9px;
+        border: 2px solid #d3dadc;
+        margin-bottom: 25px;
+        border-radius: 2px;
+    }
+    .casino-review__add textarea {
+        padding: 8px 17px;
+        width: 100%;
+        height: 194px;
+        margin: 0 0 4px;
+    }
+    .casino-review__add .btn_review {
+        width: 179px;
+        height: 35px;
+        padding-top: 1px;
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .casino-review .comment__item{
+        display: block;
+    }
+    .casino-review__add{
+        width: 493px;
+        margin: 0 auto 47px;
+    }
+    /* --------------- /casino-review --------------- */
 
 }
 
@@ -980,7 +1115,9 @@
 
     /* --------------- packages --------------- */
     .packages{
-        padding: 0 0 0 9px;
+        padding: 0 92px 0 9px;
+        margin: 0 0 15px;
+        min-height: 481px;
     }
     .packages>div{
         overflow: hidden;
@@ -1059,11 +1196,34 @@
         line-height: 16px;
         padding-top: 23px;
     }
+    .packages__rate {
+        top: -27px;
+        right: -66px;
+        padding: 0;
+        width: 147px;
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .packages__rate span {
+        width: 68px;
+    }
+    .packages__rate span:first-child {
+        margin: 0 0 5px;
+    }
+    .packages__rate>div {
+        width: 147px;
+        height: 376px;
+        font-size: 9px;
+        line-height: 9px;
+        padding: 364px 72px 0 13px;
+        margin: 0 0 8px 0;
+    }
     /* --------------- /packages --------------- */
 
     /* --------------- latest-bonuses --------------- */
     .latest-bonuses{
-
+        padding: 0 0 0 14px;
+        margin: 0 0 39px;
     }
     .latest-bonuses h2 {
         font-size: 20px;
@@ -1095,4 +1255,29 @@
         line-height: 15px;
         padding: 31px 1px 0 0;
     }
+    /* --------------- latest-bonuses --------------- */
+
+    /* --------------- casino-review --------------- */
+    .casino-review h2{
+        font-size: 20px;
+        line-height: 22px;
+        margin: 0 0 26px;
+    }
+    .casino-review__add input[type="text"], .casino-review__add textarea {
+        width: 249px;
+        height: 43px;
+        padding: 9px 9px;
+        border: 1px solid #d3dadc;
+        margin-bottom: 24px;
+        border-radius: 2px;
+    }
+    .casino-review__add textarea {
+        height: 191px;
+        padding: 8px 17px;
+        width: 100%;
+    }
+    .casino-review__add {
+        margin: 0 auto 45px;
+    }
+    /* --------------- /casino-review --------------- */
 }
