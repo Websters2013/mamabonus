@@ -276,6 +276,9 @@ input[type="search"]::-webkit-search-cancel-button {
 .site__content-item_contacts {
     margin-bottom: 223px;
 }
+.site__caption-btns {
+    display: none;
+}
 /* --------------- /site --------------- */
 
 /* --------------- casino-bonus --------------- */
@@ -566,6 +569,13 @@ input[type="search"]::-webkit-search-cancel-button {
 .btn_review:hover{
     background: #94d0f9;
     color: #ffffff;
+}
+.btn_blue {
+    background: #32abfc !important;
+    color: #ffffff !important;
+}
+.btn_blue:hover {
+    background: #1fa3fc !important;
 }
 /* --------------- /btn --------------- */
 
@@ -1128,6 +1138,38 @@ input[type="search"]::-webkit-search-cancel-button {
     .site__footer-menu {
         margin-left: 256px;
         text-align: left;
+    }
+    .site__caption-btns {
+        position: absolute;
+        display: block;
+        width: 85px;
+        height: 34px;
+        top: 0;
+        right: 2px;
+    }
+    .site__caption-btns button {
+        width: 34px;
+        height: 34px;
+        border-radius: 2px;
+        margin-left: 3px;
+        border: none;
+        padding: 0;
+        text-indent: 100%;
+        overflow: hidden;
+        opacity: 1;
+        -webkit-transition: opacity .3s ease-in-out;
+        transition: opacity .3s ease-in-out;
+    }
+    .site__caption-btns button:hover {
+        opacity: .8;
+    }
+    .site__caption-btns-resize {
+        background: #0098ff url(../img/resize-icon.png) center no-repeat;
+        background-size: 28px;
+    }
+    .site__caption-btns-refresh {
+        background: #0098ff url(../img/refresh-icon.png) center no-repeat;
+        background-size: 25px 24px;
     }
     /* --------------- /site --------------- */
 
