@@ -277,30 +277,6 @@
         display: none !important;
     }
     /* ------------ /casinos ------------ */
-
-    /*-------------casinos-device------------*/
-    .casinos-device__android,
-    .casinos-device__apple {
-        display: inline-block;
-        vertical-align: top;
-        text-indent: 100%;
-        overflow: hidden;
-        margin: 0 2px;
-    }
-    .casinos-device__android {
-        width: 20px;
-        height: 23px;
-        background: url(../img/device-icon_sprite.png) 100% 0 no-repeat;
-        background-size: 45px 23px;
-    }
-    .casinos-device__apple {
-        width: 19px;
-        height: 25px;
-        background: url(../img/device-icon_sprite.png) no-repeat;
-        background-size: 45px 23px;
-    }
-    /*-------------/casinos-device------------*/
-
 }
 
 @media (min-width: 950px) {
