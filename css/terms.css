@@ -58,14 +58,17 @@
     background: #0098ff;
 }
 
-.terms article {
+.terms q {
     position: relative;
     color: #2d3e50;
     padding: 12px 0 0 77px;
     margin-bottom: 34px;
     line-height: 16px;
+    quotes: none;
+    font-style: normal;
+    display: block;
 }
-.terms article:before {
+.terms q:before {
     content: '';
     position: absolute;
     width: 38px;
@@ -137,12 +140,12 @@
         padding: 0 0 0 8px;
         margin-bottom: 3px;
     }
-    .terms article {
+    .terms q {
         padding: 12px 0 0 77px;
         margin-bottom: 34px;
         line-height: 16px;
     }
-    .terms article:before {
+    .terms q:before {
         content: '';
         position: absolute;
         width: 38px;
