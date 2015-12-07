@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+/*
+    deposit-bonus styles
+    version: 07.12.2015
+
+    deposit-bonus
+
+*/
+
+/* ------------ deposit-bonus ------------ */
+.deposit-bonus {
+    border-bottom: 2px dotted #dcdee5;
+}
+.deposit-bonus__aside {
+    border-bottom: 2px dotted #dcdee5;
+}
+.deposit-bonus__pic {
+    width: 137px;
+    height: 145px;
+    border: 1px solid #e9e8e8;
+    border-radius: 5px;
+    position: relative;
+    margin: 0 auto;
+}
+.deposit-bonus__pic .deposit-bonus__logo {
+    width: 100%;
+    height: 100%;
+}
+.deposit-bonus__logo > div {
+    padding: 10px 20px 43px;
+}
+.deposit-bonus__logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.deposit-bonus__pic .btn {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.deposit-bonus__aside p {
+    position: relative;
+    font-size: 12px;
+    color: #6a828a;
+    background: #f8f8f8;
+    line-height: 1.667;
+    margin: 120px 0 20px;
+}
+.deposit-bonus__aside p:before {
+    content: '';
+    position: absolute;
+    background: url("../img/deposit-bonus__girl.png") no-repeat;
+    width: 158px;
+    height: 117px;
+    top: -106px;
+    left: 50%;
+    margin-left: -79px;
+}
+.deposit-bonus__controls {
+    border-bottom: 2px dotted #dcdee5;
+}
+.deposit-bonus__controls > div {
+    margin-bottom: 20px;
+}
+.deposit-bonus__cash > div {
+    width: 106px;
+    height: 106px;
+    position: relative;
+    margin: 0 auto;
+}
+.deposit-bonus__cash > div:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -5px;
+    border: 5px solid #deb100;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+.deposit-bonus__cash > div > div {
+    border-radius: 50%;
+    background: #fecb00;
+    border: 9px solid #f5c300;
+    font-size: 35px;
+    color: rgb( 255, 255, 255 );
+    font-weight: bold;
+    line-height: 1.667;
+    font-family: "helvetica-bold", sans-serif;
+    text-shadow: 2px 2px 0 #deb100;
+    position: relative;
+    z-index: 2;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.deposit-bonus__buttons a {
+    margin: 0 auto 20px;
+    display: block;
+    left: auto;
+    float: none;
+}
+.deposit-bonus__info {
+    border-bottom: 2px dotted #dcdee5;
+}
+.deposit-bonus__controls,
+.deposit-bonus__aside p,
+.deposit-bonus__valid,
+.deposit-bonus__games,
+.deposit-bonus__info {
+    padding: 30px 20px;
+}
+.deposit-bonus__categories {
+    margin-bottom: 10px;
+}
+.deposit-bonus__categories dl:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+}
+.deposit-bonus__categories dl {
+    text-align: justify;
+    display: block;
+    margin-bottom: -10px;
+}
+.deposit-bonus__categories dd,
+.deposit-bonus__categories dt {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    text-align: left;
+}
+.deposit-bonus__categories dd {
+    font-size: 14px;
+    color: rgb( 45, 62, 80 );
+}
+.deposit-bonus__categories dt {
+    font-size: 14px;
+    color: rgb( 106, 130, 138 );
+}
+.deposit-bonus__code dt {
+    display: block;
+    color: #2d3e50;
+    margin-bottom: 10px;
+}
+.deposit-bonus__code dd {
+    display: inline-block;
+    padding: 10px 10px;
+    border: 1px dashed #0098ff;
+    font-size: 24px;
+    color: #2d3e50;
+    font-family: "helvetica-medium", sans-serif;
+}
+.deposit-bonus__games dt {
+    font-size: 16px;
+    color: #2d3e50;
+    display: block;
+    margin-bottom: 10px;
+}
+.deposit-bonus__valid dt {
+    font-size: 16px;
+    color: #2d3e50;
+    display: block;
+    margin-bottom: 10px;
+}
+.deposit-bonus__valid dd {
+    padding-left: 20px;
+}
+.deposit-bonus__valid dd div {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #0098ff;
+}
+.deposit-bonus__valid dd a {
+    color: #0098ff;
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: border-bottom 0.3s ease;
+    transition: border-bottom 0.3s ease;
+}
+.deposit-bonus__valid dd a:hover {
+    border-bottom: 1px solid #0098ff;
+}
+/* ------------ /deposit-bonus ------------ */

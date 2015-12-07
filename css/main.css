@@ -4,6 +4,15 @@
 input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
 }
+.centering {
+    display: table;
+    width: 100%;
+}
+.centering > * {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
 /* --------------- Style to null --------------- */
 
 /*
@@ -143,6 +152,9 @@ input[type="search"]::-webkit-search-cancel-button {
 .site__caption:after {
     top: auto;
     bottom: -1px;
+}
+.site__caption_blue {
+    color: #0098ff;
 }
 .site__content-layout{
     padding: 13px 3px 0;
@@ -846,6 +858,65 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /*--------------/pagination--------------*/
+
+/* ------------ allowed-games ------------ */
+.allowed-games {
+    text-align: center;
+    /*max-width: 384px;*/
+}
+.allowed-games span {
+    width: 80px;
+    height: 86px;
+    position: relative;
+    padding-top: 74px;
+    display: inline-block;
+    vertical-align: top;
+    color: #babecb;
+    font-size: 12px;
+    margin: 0 4px 18px;
+}
+.allowed-games span.active {
+    color: #0098ff;
+}
+.allowed-games span:before {
+    content: '';
+    position: absolute;
+    background: url("../img/allowed-games.png") no-repeat;
+    background-size: 256px 390px;
+    color: #babecb;
+    font-size: 12px;
+    width: 65px;
+    height: 64px;
+    top: 0;
+    left: 50%;
+    margin-left: -32px;
+}
+.allowed-games span.allowed-games__slots:before {background-position: 0 -197px;}
+.allowed-games span.allowed-games__poker:before {background-position: -64px -197px;}
+.allowed-games span.allowed-games__table:before {background-position: -130px -197px;}
+.allowed-games span.allowed-games__bj:before {background-position: -195px -197px;}
+.allowed-games span.allowed-games__roulette:before {background-position: 0 -261px;}
+.allowed-games span.allowed-games__craps:before {background-position: -64px -261px;}
+.allowed-games span.allowed-games__lottery:before {background-position: -130px -261px;}
+.allowed-games span.allowed-games__bacaraut:before {background-position: -195px -261px;}
+.allowed-games span.allowed-games__scrathc:before {background-position: 0 -326px;}
+.allowed-games span.allowed-games__bingo:before {background-position: -64px -326px;}
+.allowed-games span.allowed-games__vslots:before {background-position: -130px -326px;}
+.allowed-games span.allowed-games__vgames:before {background-position: -195px -326px;}
+
+.allowed-games span.allowed-games__slots.active:before {background-position: 0 1px;}
+.allowed-games span.allowed-games__poker.active:before {background-position: -64px 1px;}
+.allowed-games span.allowed-games__table.active:before {background-position: -130px 1px;}
+.allowed-games span.allowed-games__bj.active:before {background-position: -195px 1px;}
+.allowed-games span.allowed-games__roulette.active:before {background-position: 0 -63px;}
+.allowed-games span.allowed-games__craps.active:before {background-position: -64px -63px;}
+.allowed-games span.allowed-games__lottery.active:before {background-position: -130px -63px;}
+.allowed-games span.allowed-games__bacaraut.active:before {background-position: -195px -63px;}
+.allowed-games span.allowed-games__scrathc.active:before {background-position: 0 -128px;}
+.allowed-games span.allowed-games__bingo.active:before {background-position: -64px -128px;}
+.allowed-games span.allowed-games__vslots.active:before {background-position: -130px -128px;}
+.allowed-games span.allowed-games__vgames.active:before {background-position: -195px -128px;}
+/* ------------ /allowed-games ------------ */
 
 @media (min-width: 768px){
 
