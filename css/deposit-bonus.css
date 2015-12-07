@@ -192,25 +192,23 @@
 @media (min-width: 768px) {
 
     /* ------------ deposit-bonus ------------ */
-    .deposit-bonus {}
-    .deposit-bonus:after {
-        content: "";
+    .deposit-bonus {
         display: table;
-        clear: both;
     }
     .deposit-bonus__aside {
         width: 183px;
-        float: left;
+        display: table-cell;
         border-bottom: none;
+        vertical-align: top;
     }
     .deposit-bonus__pic {
         width: 100%;
         height: 182px;
     }
     .deposit-bonus__wrap {
-        width: 537px;
-        float: right;
-
+        display: table-cell;
+        vertical-align: top;
+        padding: 0 0 0 10px;
     }
     .deposit-bonus__pic .deposit-bonus__logo {}
     .deposit-bonus__logo > div {}
