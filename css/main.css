@@ -72,6 +72,12 @@ input[type="search"]::-webkit-search-cancel-button {
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "helvetica-heavy";
+    src: url("../fonts/helveticaneueltstd-hv.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
 /* --------------- /fonts --------------- */
 
 /* --------------- site --------------- */
@@ -552,6 +558,12 @@ input[type="search"]::-webkit-search-cancel-button {
 .btn_review:hover{
     background: #94d0f9;
     color: #ffffff;
+}
+.btn_red{
+    background: #dc2d26;
+}
+.btn_red:hover{
+    background: #ba2b24;
 }
 /* --------------- /btn --------------- */
 
