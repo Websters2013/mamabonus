@@ -30,14 +30,14 @@ $(function(){
             else if (element_width>40&& element_width<=100){
                 element_child.addClass('red');
             }
-            if($(window).width() >= 1006){
+            if($(window).width() >= 900){
                 $('.menu-to-aside').clone().appendTo(".site__aside");
                 $('.menu-to-aside').addClass('aside__layout');
                 $('.menu-to-aside').removeClass('menu-to-aside');
             }
         },
         'resize':function(){
-            if($(window).width() >= 1006){
+            if($(window).width() >= 900){
                 $('.menu-to-aside').clone().appendTo(".site__aside");
                 $('.menu-to-aside').addClass('aside__layout');
                 $('.menu-to-aside').removeClass('menu-to-aside');
