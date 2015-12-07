@@ -31,14 +31,16 @@ $(function(){
                 element_child.addClass('red');
             }
             if($(window).width() >= 1006){
-                $('.menu__aside').clone().appendTo(".site__aside");
-                $('.menu__aside').addClass('aside__layout');
-                $('.menu__aside').removeClass('menu__aside');
+                $('.menu-to-aside').clone().appendTo(".site__aside");
+                $('.menu-to-aside').addClass('aside__layout');
+                $('.menu-to-aside').removeClass('menu-to-aside');
             }
         },
         'resize':function(){
             if($(window).width() >= 1006){
-                $('.aside__layout').clone().appendTo(".site__aside");
+                $('.menu-to-aside').clone().appendTo(".site__aside");
+                $('.menu-to-aside').addClass('aside__layout');
+                $('.menu-to-aside').removeClass('menu-to-aside');
             }
         }
     });
