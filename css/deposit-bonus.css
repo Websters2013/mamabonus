@@ -188,3 +188,186 @@
     border-bottom: 1px solid #0098ff;
 }
 /* ------------ /deposit-bonus ------------ */
+
+@media (min-width: 768px) {
+
+    /* ------------ deposit-bonus ------------ */
+    .deposit-bonus {}
+    .deposit-bonus:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .deposit-bonus__aside {
+        width: 183px;
+        float: left;
+        border-bottom: none;
+    }
+    .deposit-bonus__pic {
+        width: 100%;
+        height: 182px;
+    }
+    .deposit-bonus__wrap {
+        width: 537px;
+        float: right;
+
+    }
+    .deposit-bonus__pic .deposit-bonus__logo {}
+    .deposit-bonus__logo > div {}
+    .deposit-bonus__logo img {}
+    .deposit-bonus__pic .btn {}
+    .deposit-bonus__aside p {
+        margin: 151px 0 0;
+    }
+    .deposit-bonus__aside p:before {}
+    .deposit-bonus__controls {}
+    .deposit-bonus__controls > div {
+        display: inline-block;
+        vertical-align: top;
+        width: 130px;
+    }
+    .deposit-bonus__controls > div.deposit-bonus__buttons {
+        margin: 0;
+    }
+    .deposit-bonus__controls > div.deposit-bonus__cash {
+        margin: 0 20px 0 0;
+    }
+    .deposit-bonus__cash > div {}
+    .deposit-bonus__cash > div:before {}
+    .deposit-bonus__cash > div > div {}
+    .deposit-bonus__buttons a {}
+    .deposit-bonus__info {}
+    .deposit-bonus__controls,
+    .deposit-bonus__aside p,
+    .deposit-bonus__valid,
+    .deposit-bonus__games,
+    .deposit-bonus__info {
+        padding: 20px 5px;
+    }
+    .deposit-bonus__categories {
+        display: inline-block;
+        vertical-align: top;
+        width: 300px;
+        margin: 0 20px 0 0;
+    }
+    .deposit-bonus__code {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 190px;
+    }
+    .deposit-bonus__categories dl:after {}
+    .deposit-bonus__categories dl {}
+    .deposit-bonus__categories dd,
+    .deposit-bonus__categories dt {}
+    .deposit-bonus__categories dd {}
+    .deposit-bonus__categories dt {}
+    .deposit-bonus__code dt {}
+    .deposit-bonus__code dd {}
+    .deposit-bonus__valid,
+    .deposit-bonus__games {
+        text-align: justify;
+    }
+    .deposit-bonus__valid:after,
+    .deposit-bonus__games:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+    .deposit-bonus__valid dd,
+    .deposit-bonus__games dd {
+        display: inline-block;
+        vertical-align: top;
+        width: 74%;
+    }
+    .deposit-bonus__valid dt,
+    .deposit-bonus__games dt {
+        display: inline-block;
+        vertical-align: top;
+        width: 25%;
+    }
+    .deposit-bonus__valid dd div {}
+    /* ------------ /deposit-bonus ------------ */
+
+}
+
+@media (min-width: 950px) {
+
+    /* ------------ deposit-bonus ------------ */
+    .deposit-bonus {}
+    .deposit-bonus__aside {}
+    .deposit-bonus__pic {}
+    .deposit-bonus__pic .deposit-bonus__logo {}
+    .deposit-bonus__logo > div {}
+    .deposit-bonus__logo img {}
+    .deposit-bonus__pic .btn {}
+    .deposit-bonus__aside p {}
+    .deposit-bonus__aside p:before {}
+    .deposit-bonus__controls {}
+    .deposit-bonus__controls > div {}
+    .deposit-bonus__cash > div {}
+    .deposit-bonus__cash > div:before {}
+    .deposit-bonus__cash > div > div {}
+    .deposit-bonus__buttons a {}
+    .deposit-bonus__info {}
+    .deposit-bonus__controls,
+    .deposit-bonus__aside p,
+    .deposit-bonus__valid,
+    .deposit-bonus__games,
+    .deposit-bonus__info {}
+    .deposit-bonus__categories {}
+    .deposit-bonus__categories dl:after {}
+    .deposit-bonus__categories dl {}
+    .deposit-bonus__categories dd,
+    .deposit-bonus__categories dt {}
+    .deposit-bonus__categories dd {}
+    .deposit-bonus__categories dt {}
+    .deposit-bonus__code dt {}
+    .deposit-bonus__code dd {}
+    .deposit-bonus__games dt {}
+    .deposit-bonus__valid dt {}
+    .deposit-bonus__valid dd {}
+    .deposit-bonus__valid dd div {}
+    /* ------------ /deposit-bonus ------------ */
+
+}
+
+@media (min-width: 1024px) {
+
+    /* ------------ deposit-bonus ------------ */
+    .deposit-bonus {}
+    .deposit-bonus__aside {}
+    .deposit-bonus__pic {}
+    .deposit-bonus__pic .deposit-bonus__logo {}
+    .deposit-bonus__logo > div {}
+    .deposit-bonus__logo img {}
+    .deposit-bonus__pic .btn {}
+    .deposit-bonus__aside p {}
+    .deposit-bonus__aside p:before {}
+    .deposit-bonus__controls {}
+    .deposit-bonus__controls > div {}
+    .deposit-bonus__cash > div {}
+    .deposit-bonus__cash > div:before {}
+    .deposit-bonus__cash > div > div {}
+    .deposit-bonus__buttons a {}
+    .deposit-bonus__info {}
+    .deposit-bonus__controls,
+    .deposit-bonus__aside p,
+    .deposit-bonus__valid,
+    .deposit-bonus__games,
+    .deposit-bonus__info {}
+    .deposit-bonus__categories {}
+    .deposit-bonus__categories dl:after {}
+    .deposit-bonus__categories dl {}
+    .deposit-bonus__categories dd,
+    .deposit-bonus__categories dt {}
+    .deposit-bonus__categories dd {}
+    .deposit-bonus__categories dt {}
+    .deposit-bonus__code dt {}
+    .deposit-bonus__code dd {}
+    .deposit-bonus__games dt {}
+    .deposit-bonus__valid dt {}
+    .deposit-bonus__valid dd {}
+    .deposit-bonus__valid dd div {}
+    /* ------------ /deposit-bonus ------------ */
+
+}
