@@ -163,7 +163,7 @@ input[type="search"]::-webkit-search-cancel-button {
     color: #0098ff;
 }
 .site__content-layout{
-    padding: 13px 3px 0;
+    padding: 16px 3px 0;
     overflow: hidden;
 }
 .site__content-layout:after{
@@ -966,17 +966,21 @@ input[type="search"]::-webkit-search-cancel-button {
     color:#dc2d26;
     font-size: 15px;
     text-align: center;
-    padding: 10px 0 10px 0;
+    padding: 10px 0 17px 0;
 }
 .warning .site__caption{
     font-family: 'helvetica-bold', sans-serif;
     color:#dc2d26;
     font-size: 13px;
-    margin-bottom: 0;
+    margin-bottom: 5px;
+    border-bottom: 2px dotted #e9e8e8;
+    border-top: 2px dotted #e9e8e8;
+    padding: 12px 0;
 }
 .warning .site__caption:before{
     content: "";
     position: absolute;
+    top: 6px;
     left: 0;
     border-radius: 2px;
     border: none;
@@ -991,7 +995,7 @@ input[type="search"]::-webkit-search-cancel-button {
     border-radius: 2px;
     width:25px;
     right: 0;
-    top: 0;
+    top: 6px;
     border: none;
     left: inherit;
     height:25px;
@@ -1002,32 +1006,42 @@ input[type="search"]::-webkit-search-cancel-button {
     font-family: 'helvetica-light', sans-serif;
     font-size: 13.5px;
     display: inline-block;
-    border-bottom: 1px dotted #e9e8e8;
-    margin-bottom: 10px;
+    border-bottom: 2px dotted #e9e8e8;
+    margin-bottom: 13px;
     padding-bottom: 10px;
+
 }
 .warning__software__title span{
     color:#6a828a;
-    padding-left: 5px;
+    padding-left: 11px;
 }
 .warning__pic{
     float:left;
     width: 145px;
-    height: 145px;
+    height: 117px;
     border: 1px solid #e9e8e8;
-    padding: 20px;
-    margin: 0 10px 10px 0;
+    padding: 16px 25px 14px 25px;
+    margin: 0 10px 4px 0;
+    border-radius: 4px;
 }
 .warning__pic img{
     width: 100%;
     height: 100%;
 }
-.warning__software>p{
+.warning .warning__software p{
     font-family: 'helvetica-light', sans-serif;
     color:#6a828a;
     font-size: 12px;
     line-height: 14px;
+    border-bottom: 2px dotted #e9e8e8;
     margin-bottom: 10px;
+    padding-bottom: 14px;
+    letter-spacing: 0.1px;
+}
+.warning .warning__software p:last-child{
+    border-bottom: none;
+    margin-top: 0;
+    padding-top: 0;
 }
 .warning__software>p>span{
     font-family: 'helvetica-medium', sans-serif;
@@ -1035,11 +1049,50 @@ input[type="search"]::-webkit-search-cancel-button {
     padding-right: 5px;
 }
 .warning__software>p>a {
-    font-family: 'helvetica-light', sans-serif;
+    font-family: 'helvetica-medium', sans-serif;
     color: #c1140e;
 }
 .warning__software>p>a:hover{
     color: #2d3e50;
+}
+.warning__casinos{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+.warning__item{
+    width: 225px;
+    height: 275px;
+    display: inline-block;
+    margin: 0 7px 10px 7px;
+    vertical-align: top;
+    padding: 14px 22px 22px 22px;
+    border: 1px solid #e9e8e8;
+    box-shadow: 8px 8px 23px #e9e8e8;
+}
+.warning__item__pic{
+    height:90px;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.warning__item .btn_play {
+    background: #dc2d26;
+    float: none;
+    margin-right: 0;
+}
+.warning__item .btn_play:hover {
+    background: #f17b76;
+}
+.warning__item>div{
+    height: 143px;
+    border: 1px solid #e9e8e8;
+    background: #fff;
+    text-align: center;
+    border-radius: 3px;
+    padding: 29px 11px 21px 20px;
+    margin-bottom: 10px;
 }
 /*--------------/warning--------------*/
 
@@ -1297,6 +1350,63 @@ input[type="search"]::-webkit-search-cancel-button {
     }
     /*-------------- /nice-checkbox --------------*/
 }
+/*-------------- warning --------------*/
+.warning .site__caption {
+    font-size: 20px;
+}
+.warning-title {
+    font-size: 23.5px;
+}
+.warning .site__caption:before,
+.warning .site__caption:after {
+    border-radius: 4px;
+    width: 32px;
+    top: 5px;
+    height: 34px;
+}
+.warning .site__caption {
+    margin-bottom: 14px;
+}
+.warning-title {
+    padding: 10px 0 36px 0;
+}
+.warning .warning__software p:last-child,
+.warning .warning__software p {
+    letter-spacing: 1.1px;
+    margin-left: 196px;
+    border-top: 2px dotted #e9e8e8;
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-top: 10px;
+    line-height: 16px;
+    padding-bottom: 11px;
+}
+.warning .warning__software p:first-child{
+    padding-top: 19px;
+}
+.warning__software__title {
+    margin-left: 7px;
+    border-bottom:none;
+    margin-bottom: 1px;
+}
+.warning__pic {
+    width: 179px;
+    height: 143px;
+    padding: 18px 34px 14px 31px;
+    margin: 0 10px 4px 0;
+}
+.warning__software__title span {
+    padding-left: 19px;
+}
+.warning__item {
+    width: 230px;
+    margin: 0 5px 10px 5px;
+}
+.site__content .site__content-head {
+    font-size: 23.5px;
+    padding-left: 15px;
+}
+/*-------------- /warning --------------*/
 
 @media (min-width: 950px){
 
@@ -1436,6 +1546,13 @@ input[type="search"]::-webkit-search-cancel-button {
         display: none;
     }
     /* --------------- /menu --------------- */
+
+    /* --------------- warning --------------- */
+
+    .warning__item {
+        width: 222px;
+    }
+    /* --------------- /warning --------------- */
 
     /* --------------- search --------------- */
     .search__frame{
