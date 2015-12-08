@@ -123,6 +123,41 @@
     font-family: 'helvetica-bold', sans-serif;
     width: 45%;
 }
+.casinos__item-mamameter {
+
+}
+.casinos__item-mamameter .mama-metr {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 112px;
+    display: inline-block;
+}
+.casinos__item-mamameter .mama-metr__frame {
+    width: 112px;
+    height: 14px;
+}
+.casinos__item-mamameter .mama-metr__value,
+.casinos__item-mamameter .mama-metr__value > div {
+    height: 12px;
+    background-size: 12px 10px;
+    background-position: center left;
+    background-repeat: repeat-x;
+}
+.casinos__item-mamameter .mama-metr__value > div {
+
+}
+.casinos__item-mamameter .mama-metr__value > div:before {
+    display: none;
+}
+.casinos__item-mamameter .mama-metr__number {
+    padding: 3px 8px 1px;
+    font-size: 10px;
+    top: -2px;
+}
+.casinos__item-mamameter .mama-metr__number b {
+    font-size: 10px;
+}
 /* ------------ /casinos ------------ */
 
 /*-------------casinos-device------------*/
