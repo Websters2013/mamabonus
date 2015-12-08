@@ -1243,8 +1243,65 @@ button.estimate__dislike{
 }
 /*-------------- /nice-checkbox --------------*/
 
-@media (min-width: 768px){
+/*-------------- warning --------------*/
+.warning .site__caption {
+    font-size: 20px;
+}
+.warning-title {
+    font-size: 23.5px;
+}
+.warning .site__caption:before,
+.warning .site__caption:after {
+    border-radius: 4px;
+    width: 32px;
+    top: 5px;
+    height: 34px;
+}
+.warning .site__caption {
+    margin-bottom: 14px;
+}
+.warning-title {
+    padding: 10px 0 36px 0;
+}
+.warning .warning__software p:last-child,
+.warning .warning__software p {
+    letter-spacing: 1.1px;
+    margin-left: 196px;
+    border-top: 2px dotted #e9e8e8;
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-top: 10px;
+    line-height: 16px;
+    padding-bottom: 11px;
+}
+.warning .warning__software p:first-child{
+    padding-top: 19px;
+}
+.warning__software__title {
+    margin-left: 7px;
+    border-bottom:none;
+    margin-bottom: 1px;
+}
+.warning__pic {
+    width: 179px;
+    height: 143px;
+    padding: 18px 34px 14px 31px;
+    margin: 0 10px 4px 0;
+}
+.warning__software__title span {
+    padding-left: 19px;
+}
+.warning__item {
+    width: 230px;
+    margin: 0 5px 10px 5px;
+}
+.site__content .site__content-head {
+    font-size: 23.5px;
+    padding-left: 15px;
+}
+/*-------------- /warning --------------*/
 
+@media (min-width: 768px){
     /* ------------ btn ------------ */
     .btn_home {
         width: 159px;
@@ -1411,7 +1468,7 @@ button.estimate__dislike{
         background: url("../img/icon-home.png") no-repeat 50% 7px #0098ff;
     }
     .menu__wrap  .menu__home:hover{
-        height: 55px;
+
     }
     /* --------------- /menu --------------- */
 
@@ -1528,63 +1585,6 @@ button.estimate__dislike{
     }
     /*-------------- /nice-checkbox --------------*/
 }
-/*-------------- warning --------------*/
-.warning .site__caption {
-    font-size: 20px;
-}
-.warning-title {
-    font-size: 23.5px;
-}
-.warning .site__caption:before,
-.warning .site__caption:after {
-    border-radius: 4px;
-    width: 32px;
-    top: 5px;
-    height: 34px;
-}
-.warning .site__caption {
-    margin-bottom: 14px;
-}
-.warning-title {
-    padding: 10px 0 36px 0;
-}
-.warning .warning__software p:last-child,
-.warning .warning__software p {
-    letter-spacing: 1.1px;
-    margin-left: 196px;
-    border-top: 2px dotted #e9e8e8;
-    margin-bottom: 0;
-    border-bottom: none;
-    padding-top: 10px;
-    line-height: 16px;
-    padding-bottom: 11px;
-}
-.warning .warning__software p:first-child{
-    padding-top: 19px;
-}
-.warning__software__title {
-    margin-left: 7px;
-    border-bottom:none;
-    margin-bottom: 1px;
-}
-.warning__pic {
-    width: 179px;
-    height: 143px;
-    padding: 18px 34px 14px 31px;
-    margin: 0 10px 4px 0;
-}
-.warning__software__title span {
-    padding-left: 19px;
-}
-.warning__item {
-    width: 230px;
-    margin: 0 5px 10px 5px;
-}
-.site__content .site__content-head {
-    font-size: 23.5px;
-    padding-left: 15px;
-}
-/*-------------- /warning --------------*/
 
 @media (min-width: 950px){
 
@@ -1612,6 +1612,19 @@ button.estimate__dislike{
         height: 61px;
         border-bottom-width: 3px;
     }
+    .site__content-layout{
+        margin-left: 206px;
+        padding-top: 23px;
+    }
+    .site__caption:after,
+    .site__caption:before {
+        left: -6px;
+        right: -3px;
+    }
+    .site__content-item{
+        margin-left: 5px;
+        margin-right: 0;
+    }
     .site__aside{
         position: absolute;
         top: 0;
@@ -1622,6 +1635,11 @@ button.estimate__dislike{
         padding-top: 158px;
         box-shadow: 0 0 7px #ccc;
         background-color: #fff;
+    }
+    .site__caption {
+        margin-bottom: 18px;
+        padding: 14px 0 14px;
+        font-size: 21px;
     }
     .site:after{
         height: 186px;
@@ -1759,8 +1777,17 @@ button.estimate__dislike{
     }
     /* --------------- /menu --------------- */
 
-    /* --------------- warning --------------- */
+    /* --------------- tabs --------------- */
+    .tabs {
+        margin-bottom: 16px;
+    }
+    .tabs a{
+        margin-right: 14px;
+        padding-bottom: 8px;
+    }
+    /* --------------- /tabs --------------- */
 
+    /* --------------- warning --------------- */
     .warning__item {
         width: 222px;
     }
@@ -1771,9 +1798,9 @@ button.estimate__dislike{
         padding: 13px 0 9px 53px;
     }
     .search__frame button {
-        top: 14px;
+        top: 11px;
         right: 3px;
-        width: 26px;
+        width: 29px;
         height: 28px;
         background-size: 22px 23px;
     }
