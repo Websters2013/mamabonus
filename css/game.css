@@ -79,11 +79,15 @@
     padding: 5px 3px 4px 3px;
     margin-bottom: 21px;
 }
-.game__item a {
+.game__item > a {
     color: #0098ff;
     font-size: 16px;
     display: inline-block;
     text-transform: uppercase;
+    white-space: nowrap;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .game__item-pic {
     position: relative;
@@ -154,7 +158,7 @@
         height: 186px;
         padding: 4px;
     }
-    .game__item a {
+    .game__item > a {
         font-size: 16px;
         -webkit-transition: text-shadow .3s ease-in-out;
         transition: text-shadow .3s ease-in-out;
