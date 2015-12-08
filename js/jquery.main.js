@@ -14,7 +14,7 @@ $(function(){
 
     $(window).on({
         'load':function(){
-            var element_parent=$('.casino-bonus__game-metr'),
+            var element_parent=$('.mama-metr__value'),
                 element_child=element_parent.children('div'),
                 element_parent_width=element_parent.width(),
                 element_child_width=element_child.width();
@@ -34,6 +34,7 @@ $(function(){
                 $('.menu-to-aside').clone().appendTo(".site__aside");
                 $('.menu-to-aside').addClass('aside__layout');
                 $('.menu-to-aside').removeClass('menu-to-aside');
+                contentHeight()
             }
         },
         'resize':function(){
@@ -41,8 +42,21 @@ $(function(){
                 $('.menu-to-aside').clone().appendTo(".site__aside");
                 $('.menu-to-aside').addClass('aside__layout');
                 $('.menu-to-aside').removeClass('menu-to-aside');
+                contentHeight()
             }
         }
     });
+
+    function contentHeight() {
+        if ($('.aside__layout').length) {
+            console.log($('.aside__layout').outerHeight())
+            if ($('.site__content').outerHeight() <  $('.aside__layout').outerHeight()) {
+                var elemHeight = $('.aside__layout').outerHeight() + 160;
+                $('.site__content').css({
+                    height: elemHeight
+                });
+            }
+        }
+    }
 
 } );
