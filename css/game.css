@@ -40,7 +40,8 @@
 }
 .game__main {
     width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
+    padding: 0 3px 0 0;
 }
 .game__main img {
     width: 100%;
@@ -75,7 +76,7 @@
     width: 258px;
     height: 212px;
     text-align: center;
-    padding: 4px;
+    padding: 5px 3px 4px 3px;
     margin-bottom: 21px;
 }
 .game__item a {
@@ -87,7 +88,9 @@
 .game__item-pic {
     position: relative;
     box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.16);
-    margin-bottom: 21px;
+    margin-bottom: 19px;
+    border-radius: 3px;
+    overflow: hidden;
 }
 .game__item-pic:hover div {
     opacity: 1;
@@ -126,12 +129,12 @@
     /*------------game------------*/
     .game__mobile-support {
         font-size: 13px;
-        padding: 18px 6px 18px;
-        margin-bottom: 31px;
+        padding: 18px 6px 18px 25px;
+        margin: 18px -17px 31px;
         letter-spacing: 0.1px;
     }
     .game__main {
-        margin-bottom: 21px;
+        margin-bottom: 18px;
     }
     .game__list h3 {
         font-size: 23px;
@@ -169,12 +172,18 @@
 @media (min-width: 950px) {
 
     /*------------game------------*/
+    .game {
+        margin: 33px -15px 0 0;
+    }
     .game__mobile-support {
         display: none;
     }
     .game__main {
         width: 100%;
         margin-bottom: 20px;
+    }
+    .game__list ul {
+        padding: 0 14px 0 3px;
     }
     .game__list h3 {
         font-size: 22px;
