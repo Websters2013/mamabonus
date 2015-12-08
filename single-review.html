@@ -129,14 +129,14 @@
             <!-- site__content-layout -->
             <div class="site__content-layout">
 
-                <!-- tabs -->
-                <div class = "tabs">
+                <!-- tabs-guide -->
+                <div class = "tabs-guide">
                     <a href="#" class="active">Casino information</a>
                     <a href="#">Welcome package</a>
                     <a href="#">Casino reviews</a>
                     <a href="#">Latest bonuses</a>
                 </div>
-                <!-- /tabs -->
+                <!-- /tabs-guide -->
 
                 <h2 class="site__caption">7 reels casino latest player review</h2>
                 
@@ -524,50 +524,56 @@
                 <!-- casino-review -->
                 <div class = "casino-review">
                     <h2>CAsino review</h2>
-
-                    <!-- casino-review__rate -->
-                    <div class = "casino-review__rate">
-                        <h3>Rate Mama’s Bonus</h3>
-                        <p>How would you rate 7 Realms Casino?</p>
-                        
-                        <!-- casino-review__rating-wrap -->
-                        <div class="casino-review__rating-wrap">
-                            
-                            <!-- casino-review__rating -->
-                            <div class = "casino-review__rating">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <!-- /casino-review__rating -->
-                            
-                        </div>
-                        <!-- /casino-review__rating-wrap -->
-                        <span>(221 voted)</span>
-                    </div>
-                    <!-- /casino-review__rate -->
-
+                    
                     <!-- casino-review__add -->
                     <form action="#" class="casino-review__add">
-                        <div>
-                            <input type="text" name="name" placeholder="First Name (optional)">
+
+                        <!-- casino-review__rate -->
+                        <div class = "casino-review__rate">
+                            <h3>Rate Mama’s Bonus</h3>
+                            <p>How would you rate 7 Realms Casino?</p>
+
+                            <!-- casino-review__rating-wrap -->
+                            <div class="casino-review__rating-wrap">
+
+                                <!-- casino-review__rating -->
+                                <div class = "casino-review__rating">
+                                    <div data-rate="1"></div>
+                                    <div data-rate="2"></div>
+                                    <div data-rate="3"></div>
+                                    <div data-rate="4"></div>
+                                    <div data-rate="5"></div>
+                                    <div data-rate="6"></div>
+                                    <div data-rate="7"></div>
+                                    <div data-rate="8"></div>
+                                    <div data-rate="9"></div>
+                                    <div data-rate="10"></div>
+                                    <input type="hidden">
+                                </div>
+                                <!-- /casino-review__rating -->
+
+                            </div>
+                            <!-- /casino-review__rating-wrap -->
+                            <span>(221 voted)</span>
                         </div>
-                        <div>
-                            <textarea name="comment-add" id="comment-add" cols="30" rows="10" placeholder="Add a comment..."></textarea>
+                        <!-- /casino-review__rate -->
+
+                        <!-- casino-review__form-fields -->
+                        <div class="casino-review__form-fields">
+                            <div>
+                                <input type="text" name="name" placeholder="First Name (optional)">
+                            </div>
+                            <div>
+                                <textarea name="comment-add" id="comment-add" cols="30" rows="10" placeholder="Add a comment..."></textarea>
+                            </div>
+                            <div class="nice-checkbox">
+                                <input id="include" type="checkbox">
+                                <label for="include">Include Tel Aviv Israel with my comment to help other people</label>
+                            </div>
+                            <button type="submit" class="btn btn_review">Add a comment</button>
                         </div>
-                        <div class="nice-checkbox">
-                            <input id="include" type="checkbox">
-                            <label for="include">Include Tel Aviv Israel with my comment to help other people</label>
-                        </div>
-                        <button type="submit" class="btn btn_review">Add a comment</button>
+                        <!-- /casino-review__form-fields -->
+
                     </form>
                     <!-- /casino-review__add -->
 
