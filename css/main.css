@@ -314,6 +314,9 @@ input[type="search"]::-webkit-search-cancel-button {
 .site__caption-btns {
     display: none;
 }
+.site__caption_game {
+    display: none;
+}
 /* --------------- /site --------------- */
 
 /* --------------- casino-bonus --------------- */
@@ -1688,13 +1691,16 @@ button.estimate__dislike{
         margin-left: 256px;
         text-align: left;
     }
+    .site__caption_game {
+        display: block;
+    }
     .site__caption-btns {
         position: absolute;
         display: block;
         width: 85px;
         height: 34px;
-        top: 0;
-        right: 2px;
+        top: 7px;
+        right: -3px;
     }
     .site__caption-btns button {
         width: 34px;

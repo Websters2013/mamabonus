@@ -155,7 +155,7 @@
         position: relative;
     }
     .casinos {
-        padding: 0;
+        padding: 15px 0 0;
         width: 715px;
         margin: 0 auto 23px;
     }
@@ -289,7 +289,7 @@
         padding-right: 8px;
     }
     .casinos {
-        margin: 0 0 23px;
+        margin: 0 0 23px -1px;
         width: 700px;
     }
     .casinos > div > div:last-child,
