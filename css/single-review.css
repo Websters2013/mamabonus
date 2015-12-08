@@ -526,6 +526,9 @@
     margin: 0 0 24px;
     text-transform: uppercase;
 }
+.latest-bonuses h2.site__hot {
+    text-transform: none;
+}
 .latest-bonuses__item{
     font-family: "helvetica-light", sans-serif;
     position: relative;
