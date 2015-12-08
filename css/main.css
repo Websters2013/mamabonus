@@ -343,17 +343,6 @@ input[type="search"]::-webkit-search-cancel-button {
     color: #6a828a;
     margin-bottom: 6px;
 }
-.game-item > div > span{
-    margin-left: 20px;
-    font-size: 13px;
-    display: inline-block;
-}
-.game-item .game-item__status{
-    color: #0098ff;
-    margin-left: 7px;
-    font-size: 13px;
-    margin-bottom: 14px;
-}
 .game-item__image{
     float: left;
     width: 69px;
@@ -388,13 +377,23 @@ input[type="search"]::-webkit-search-cancel-button {
     padding-bottom: 6px;
     margin-bottom: 7px;
 }
-.game-item__button{
+.game-item__valid{
     display: inline-block;
     width: 100%;
     padding-left: 19px;
-    border-bottom: 1px dashed #6a828a;
     padding-bottom: 11px;
     margin-bottom: 16px;
+    border-bottom: 1px dashed #6a828a;
+}
+.game-item__valid > span{
+    font-size: 13px;
+    display: inline-block;
+}
+.game-item .game-item__status{
+    color: #0098ff;
+    margin-left: 7px;
+    font-size: 13px;
+    margin-bottom: 14px;
 }
 .game-item__button a:nth-child(2n){
     float: right;
@@ -431,114 +430,123 @@ input[type="search"]::-webkit-search-cancel-button {
 /* --------------- estimate --------------- */
 .estimate{
     position: relative;
-    border: 3px solid #b5b9c7;
     display: inline-block;
-    border-radius: 4px;
     width: 110px;
     height: 48px;
     margin-bottom: 12px;
     margin-left: 19px;
+    border: 3px solid #b5b9c7;
+    border-radius: 4px;
+}
+.estimate span{
+    display: none;
 }
 .estimate button{
+    position: relative;
     border: none;
     height: 100%;
-    border-radius: 8px;
-    background: #fff;
-    z-index: 0;
+    width: 47%;
     padding: 0;
-    width: 44%;
+    background-color: #fff;
+    z-index: 0;
+}
+.estimate button,
+.estimate button:after{
+    background-size: 31px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 button.estimate__like{
     background-image: url("../img/like.png");
-    background-size: 31px;
-    background-repeat: no-repeat;
-    background-position: 8px 2px;
     border-right: 3px solid #b5b9c7;
-    border-radius: 0;
     width: 52%;
-    position: relative;
-}
-.estimate__like:after{
-    content: "";
-    position: absolute;
-    top: 4px;
-    left: 9px;
-    background-size: 28px 30px;
-    width: 31px;
-    height: 32px;
-    background-image: url("../img/like-hower.png");
-    background-repeat: no-repeat;
-    opacity: 0;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
-}
-.estimate__like:hover:after{
-    opacity: 1;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
 }
 button.estimate__dislike{
     background-image: url("../img/dislike.png");
-    background-size: 31px;
-    background-repeat: no-repeat;
-    background-position: 11px 6px;
-    width: 47%;
     margin-left: -5px;
 }
-.estimate__dislike:after{
+.estimate button:after{
     content: "";
     position: absolute;
-    top: 8px;
-    right: 6px;
-    background-size: 28px 30px;
-    width: 31px;
-    height: 32px;
-    background-image: url("../img/dislike-hower.png");
-    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     -webkit-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
 }
-.estimate__dislike:hover:after{
+.estimate__like:after{
+    background-image: url("../img/like-hower.png");
+}
+.estimate__dislike:after{
+    background-image: url("../img/dislike-hower.png");
+}
+.estimate button:hover:after{
     opacity: 1;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
 }
 /* --------------- /casino-bonus --------------- */
 
 /* --------------- mama-metr --------------- */
-.mama-metr{
-    width: 200px;
-    height: 40px;
+.mama-metr,
+.mama-metr__value,
+.mama-metr__value > div{
+    position: absolute;
 }
 .mama-metr{
     display: none;
-    width: 140px;
-    height: 14px;
-    background: url("../img/whitepoint.png") repeat-x top left;
-    position: relative;
+    top: 89px;
+    right: 31px;
+    width: 132px;
     margin: 0 0 5px;
-    background-size: 14px 12px;
-    vertical-align: top;
 }
-.mama-metr > div{
+.mama-metr__value,
+.mama-metr__value > div{
+    height: 17px;
+    background-size: 14px 12px;
+    background-position: center left;
+    background-repeat: repeat-x;
+}
+.mama-metr__value{
+    width: 100%;
+    background-image: url("../img/whitepoint.png");
+    z-index: 2;
+}
+.mama-metr__value:before{
+    content: '';
     position: absolute;
-    z-index: 1;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 1px solid #dcdfe8;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    z-index: -1;
+}
+.mama-metr__value > div{
+    border: 1px solid transparent;
     top: 0;
     left: 0;
-    height: 14px;
+    z-index: 1;
 }
-.mama-metr .grey{
-    background: url("../img/greypoint.png") repeat-x top left;
-    background-size: 14px 12px;
+.mama-metr__value > div:before{
+    content: '';
+    position: absolute;
+    top: -85px;
+    left: 0;
+    width: 132px;
+    height: 89px;
+    background: url("../img/mamametr.png") no-repeat 0 0;
 }
-.mama-metr .blue{
-    background: url("../img/bluepoint.png") repeat-x top left;
-    background-size: 14px 12px;
+.mama-metr__value .grey{
+    background-image: url("../img/greypoint.png");
 }
-.mama-metr .red{
-    background: url("../img/redpoint.png") repeat-x top left;
-    background-size: 14px 12px;
+.mama-metr__value .blue{
+    background-image: url("../img/bluepoint.png");
+}
+.mama-metr__value .red{
+    background-image: url("../img/redpoint.png");
 }
 /* --------------- /mama-metr --------------- */
 
@@ -1295,14 +1303,24 @@ button.estimate__dislike{
     width: 230px;
     margin: 0 5px 10px 5px;
 }
-.site__content .site__content-head {
-    font-size: 23.5px;
-    padding-left: 15px;
-}
 /*-------------- /warning --------------*/
 
 @media (min-width: 768px){
     /* ------------ btn ------------ */
+    .btn{
+        height: 35px;
+        width: 132px;
+        font-size: 14px;
+    }
+    .btn_play:after{
+        position: relative;
+        top: 1px;
+        right: auto;
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        margin-left: 4px;
+    }
     .btn_home {
         width: 159px;
         left: 50%;
@@ -1396,7 +1414,7 @@ button.estimate__dislike{
         font-size: 13px;
     }
     .site__content-head:before{
-        border-width: 4px 4px 0 0;
+        border-width: 4px 0 0 4px;
     }
     .site__content-head:after{
         border-width: 4px 4px 0 0;
@@ -1518,6 +1536,12 @@ button.estimate__dislike{
     }
     /* --------------- /tabs --------------- */
 
+    /* --------------- mama-metr --------------- */
+    .mama-metr{
+        display: block;
+    }
+    /* --------------- /mama-metr --------------- */
+
     /* --------------- game-item --------------- */
     .game-item__image{
         width: 112px;
@@ -1549,10 +1573,66 @@ button.estimate__dislike{
         font-size: 12px;
         line-height: 18px;
     }
+    .game-item__valid{
+        margin-bottom: 14px;
+        padding-right: 6px;
+    }
+    .game-item__valid > span{
+        padding-top: 10px;
+        padding-left: 8px;
+        font-size: 17px;
+    }
+    .game-item .game-item__status{
+        margin-left: 6px;
+        font-size: 15px;
+    }
     .game-item__button{
         width: auto;
+        float: right;
+    }
+    .game-item__button > a{
+        margin-left: 20px;
+    }
+    .game-item__review{
+        margin-right: 19px;
+        padding-top: 8px;
+    }
+    .game-item__number{
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 24px;
+        padding-top: 9px;
+    }
+    .game-item__number > span:before{
+        left: -34px;
+        top: -4px;
+        height: 22px;
+        width: 23px;
+        background-size: 24px;
     }
     /* --------------- /game-item --------------- */
+
+    /* ------------ estimate ------------ */
+    .estimate{
+        width: 84px;
+        height: 39px;
+        margin-left: 12px;
+        border-width: 2px;
+    }
+    .estimate > button,
+    .estimate > button:after{
+        background-size: 23px;
+    }
+    .estimate span{
+        position: absolute;
+        top: 9px;
+        left: 90px;
+        display: block;
+        width: 100px;
+        font-size: 14px;
+        color: #6a828a;
+    }
+    /* ------------ /estimate ------------ */
 
     /* ------------ social-2 ------------ */
     .social-2 {
