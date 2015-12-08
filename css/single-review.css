@@ -801,7 +801,7 @@
     .comment__btns .btn_play {
         width: 131px;
         height: 35px;
-        padding-top: 12px;
+        padding-top: 11px;
         margin-right: 15px;
     }
     /* --------------- /comment --------------- */
@@ -1124,7 +1124,7 @@
     .casino-review .comment__item{
         display: block;
     }
-    .casino-review__add{
+    .casino-review__form-fields{
         width: 486px;
         margin: 0 auto 47px;
     }
@@ -1429,7 +1429,7 @@
         width: 100%;
         margin: 0 0 4px;
     }
-    .casino-review__add {
+    .casino-review__form-fields {
         margin: 0 auto 45px;
     }
     .casino-review__rate h3 {

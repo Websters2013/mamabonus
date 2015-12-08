@@ -527,6 +527,7 @@
                     
                     <!-- casino-review__add -->
                     <form action="#" class="casino-review__add">
+
                         <!-- casino-review__rate -->
                         <div class = "casino-review__rate">
                             <h3>Rate Mama’s Bonus</h3>
@@ -557,17 +558,22 @@
                         </div>
                         <!-- /casino-review__rate -->
 
-                        <div>
-                            <input type="text" name="name" placeholder="First Name (optional)">
+                        <!-- casino-review__form-fields -->
+                        <div class="casino-review__form-fields">
+                            <div>
+                                <input type="text" name="name" placeholder="First Name (optional)">
+                            </div>
+                            <div>
+                                <textarea name="comment-add" id="comment-add" cols="30" rows="10" placeholder="Add a comment..."></textarea>
+                            </div>
+                            <div class="nice-checkbox">
+                                <input id="include" type="checkbox">
+                                <label for="include">Include Tel Aviv Israel with my comment to help other people</label>
+                            </div>
+                            <button type="submit" class="btn btn_review">Add a comment</button>
                         </div>
-                        <div>
-                            <textarea name="comment-add" id="comment-add" cols="30" rows="10" placeholder="Add a comment..."></textarea>
-                        </div>
-                        <div class="nice-checkbox">
-                            <input id="include" type="checkbox">
-                            <label for="include">Include Tel Aviv Israel with my comment to help other people</label>
-                        </div>
-                        <button type="submit" class="btn btn_review">Add a comment</button>
+                        <!-- /casino-review__form-fields -->
+
                     </form>
                     <!-- /casino-review__add -->
 
