@@ -116,7 +116,6 @@ var subMenu = function (obj) {
         _init = function () {
             _addEvents();
         };
-
     //public properties
 
     //public methods
