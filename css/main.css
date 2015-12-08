@@ -196,7 +196,7 @@ input[type="search"]::-webkit-search-cancel-button {
     right: 0;
     bottom: 0;
     height: 153px;
-    box-shadow: 0 -13px 30px #eaeaea;
+    box-shadow: 0 -5px 15px #eaeaea;
 }
 .site__footer-layout {
     position: relative;
