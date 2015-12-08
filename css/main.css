@@ -603,11 +603,16 @@ button.estimate__dislike{
     background: url("../img/btn_home.png") no-repeat;
     background-size: contain;
 }
-.btn_blue {
+.btn_aside{
+    display: block!important;
+    width: auto!important;
+    margin: 0 10px;
+}
+.btn_blue, .btn_aside {
     background: #32abfc !important;
     color: #ffffff !important;
 }
-.btn_blue:hover {
+.btn_blue:hover, .btn_aside:hover {
     background: #1fa3fc !important;
 }
 /* --------------- /btn --------------- */
