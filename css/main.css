@@ -924,17 +924,21 @@ button.estimate__dislike{
 
 /*--------------pagination--------------*/
 .pagination {
-    text-align: center;
-    padding: 0 18px 0 0;
-    margin-bottom: 21px;
+    text-align: justify;
+    width: 316px;
+    margin: 0 auto 20px;
+}
+.pagination:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
 }
 .pagination li {
     display: inline-block;
     vertical-align: top;
-    margin: 0 1px;
 }
 .pagination li a {
-    font-size: 18px;
+    font-size: 21px;
     line-height: 33px;
     font-family: 'helvetica-light', sans-serif;
     color: #9096a5;
@@ -947,18 +951,17 @@ button.estimate__dislike{
 .pagination li a.active {
     position: relative;
     top: -1px;
-    font-size: 19px;
+    font-size: 22px;
     color: #0098ff;
     font-family: 'helvetica-medium', sans-serif;
 }
 .pagination__prev,
 .pagination__next {
     position: relative;
-    left: -4px;
     display: inline-block;
     vertical-align: top;
-    width: 29px;
-    height: 29px;
+    width: 34px;
+    height: 34px;
     border: 1px solid #0098ff;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -972,7 +975,6 @@ button.estimate__dislike{
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    left: 4px;
 }
 .pagination__prev:hover {
     -webkit-transform: translateX(-3px);
@@ -984,7 +986,6 @@ button.estimate__dislike{
     -ms-transform: translateX(3px) rotate(180deg);
     transform: translateX(3px) rotate(180deg);
 }
-
 /*--------------/pagination--------------*/
 
 /* ------------ allowed-games ------------ */
@@ -1587,6 +1588,33 @@ button.estimate__dislike{
         height: 8px;
     }
     /*-------------- /nice-checkbox --------------*/
+
+    /*--------------pagination--------------*/
+    .pagination {
+        text-align: center;
+        padding: 0 18px 0 0;
+        margin-bottom: 21px;
+        width: auto;
+    }
+    .pagination li a {
+        font-size: 18px;
+    }
+    .pagination li a:hover {
+        color: #0098ff;
+    }
+    .pagination li a.active {
+        font-size: 19px;
+    }
+    .pagination__prev,
+    .pagination__next {
+        left: -4px;
+        width: 29px;
+        height: 29px;
+    }
+    .pagination__next {
+        left: 4px;
+    }
+    /*--------------/pagination--------------*/
 }
 
 @media (min-width: 950px){
