@@ -12,6 +12,11 @@ $(function(){
         }
     });
 
+    $.each( $('.casino-review__rating-wrap'), function(){
+        new Rating( $(this) );
+    } );
+
+
     $(window).on({
         'load':function(){
             var element_parent=$('.casino-bonus__game-metr'),
@@ -46,3 +51,49 @@ $(function(){
     });
 
 } );
+
+var Rating = function (obj) {
+
+    var _obj = obj,
+        _itemRate = _obj.find('.casino-review__rating div'),
+        _hiddenInput = _obj.find('input[type="hidden"]');
+
+    var _addEvents = function () {
+
+            _itemRate.on({
+                'click': function(){
+                    var curItem = $(this),
+                        dataRate = curItem.attr('data-rate'),
+                        prevElems = curItem.prevAll('div');
+
+                    _itemRate.removeClass('active');
+                    prevElems.addClass('active');
+                    curItem.addClass('active');
+                    _hiddenInput.val(dataRate);
+                    _addClassObj();
+                }
+            });
+
+        },
+        _addClassObj = function(){
+            if(_hiddenInput.val()<=2){
+                _obj.addClass('grey_rating');
+                _obj.removeClass('blue_rating');
+                _obj.removeClass('red_rating');
+            }else if (_hiddenInput.val()>2&& _hiddenInput.val()<=6){
+                _obj.addClass('blue_rating');
+                _obj.removeClass('grey_rating');
+                _obj.removeClass('red_rating');
+            }
+            else if (_hiddenInput.val()>6&& _hiddenInput.val()<=10){
+                _obj.addClass('red_rating');
+                _obj.removeClass('grey_rating');
+                _obj.removeClass('blue_rating');
+            }
+        },
+        _init = function () {
+            _addEvents();
+        };
+
+    _init();
+};

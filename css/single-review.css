@@ -687,6 +687,18 @@
     height: 128px;
     background-size: cover;
 }
+.casino-review__rating-wrap:before{
+    content: '';
+    position: absolute;
+    /*background: url("../img/bra1.png") no-repeat;*/
+    background-size: cover !important;
+    width: 75px;
+    height: 61px;
+    top: 57px;
+    left: 50%;
+    margin-left: -39px;
+    z-index: 1;
+}
 .casino-review__rating{
     border: 1px solid #dcdfe8;
     border-radius: 10px;
@@ -694,8 +706,8 @@
     padding: 10px 10px;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
 }
-
 .casino-review__rating>div{
     float: left;
     width: 23px;
@@ -706,11 +718,34 @@
     cursor: pointer;
     position: relative;
     z-index: 2;
-    margin: 0 0 0 2px;
+    margin: 0 0 0 5.3px;
+    -webkit-transition: background 300ms ease-in-out, border 300ms ease-in-out;
+    transition: background 300ms ease-in-out, border 300ms ease-in-out;
 }
 .casino-review__rating>div:first-child{
     margin-left: 0;
 }
+.casino-review__rating-wrap.grey_rating div.active{
+    background: #c2c7d3;
+    border-color: #9ea3b1;
+}
+.casino-review__rating-wrap.red_rating div.active{
+    background: #ff2921;
+    border-color: #e8150d;
+}
+.casino-review__rating-wrap.blue_rating div.active{
+    background: #0099ff;
+    border-color: #0078cb;
+}
+/*.casino-review__rating-wrap.grey_rating:before{*/
+    /*background: url("../img/bra2.png") no-repeat;*/
+/*}*/
+/*.casino-review__rating-wrap.red_rating:before{*/
+    /*background: url("../img/bra3.png") no-repeat;*/
+/*}*/
+/*.casino-review__rating-wrap.blue_rating:before{*/
+    /*background: url("../img/bra4.png") no-repeat;*/
+/*}*/
 /* --------------- /casino-review --------------- */
 
 @media (min-width: 768px){
@@ -1130,7 +1165,7 @@
         height: 31px;
         border-radius: 6px;
         border: 2px solid #dbd8d8;
-        margin: 0 0 0 3.9px;
+        margin: 0 0 0 7.7px;
     }
     .casino-review__rating>div:first-child{
         margin: 0;
@@ -1138,6 +1173,13 @@
     .casino-review__rate span {
         font-size: 18px;
         line-height: 18px;
+    }
+    .casino-review__rating-wrap:before{
+        width: 101px;
+        height: 83px;
+        top: 75px;
+        left: 50%;
+        margin-left: -53px;
     }
     /* --------------- /casino-review --------------- */
 
