@@ -314,6 +314,30 @@ input[type="search"]::-webkit-search-cancel-button {
 .site__caption_game {
     display: none;
 }
+.site__hot {
+    text-align: center;
+    text-transform: none;
+}
+.site__hot span {
+    color: #dc2d26;
+    position: relative;
+    padding-right: 39px;
+    display: inline-block;
+    font-weight: normal;
+    margin-bottom: 14px;
+    font-size: 22px;
+    font-family: "helvetica-light", sans-serif;
+}
+.site__hot span:before {
+    content:'';
+    position: absolute;
+    width: 27px;
+    height: 31px;
+    top: -13px;
+    right: 0;
+    background: url("../img/site__hot.png") no-repeat;
+    background-size: contain;
+}
 /* --------------- /site --------------- */
 
 /* --------------- casino-bonus --------------- */
@@ -1407,6 +1431,9 @@ button.estimate__dislike{
         width: 181px;
         font-size: 14px;
         margin-top: -3px;
+    }
+    .site__hot span {
+        font-size: 24px;
     }
     /* --------------- /site --------------- */
 
