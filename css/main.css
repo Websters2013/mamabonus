@@ -644,10 +644,10 @@ button.estimate__dislike{
     background: url("../img/icons-play.png") no-repeat 0 0/100% 100%;
 }
 .btn:hover{
-    background: #d9dce7;
+    background: #9ea2af;
 }
 .btn_play:hover{
-    background: #f17b76;
+    background-color: #c0140d;
 }
 .btn_review{
     background: #fff;
@@ -660,8 +660,8 @@ button.estimate__dislike{
     left: -3px;
 }
 .btn_review:hover{
-    background: #94d0f9;
-    color: #ffffff;
+    background: #0098ff;
+    color: #fff;
 }
 .btn_red{
     background: #dc2d26;
@@ -724,6 +724,7 @@ button.estimate__dislike{
     position: absolute;
     top: 100%;
     width: 133px;
+    padding-top: 14px;
     background-color: #fff;
     opacity: 0;
     visibility: hidden;
@@ -735,6 +736,32 @@ button.estimate__dislike{
     opacity: 1;
     visibility: visible;
 }
+.menu__wrap a,
+.menu__aside a{
+    display: block;
+    position: relative;
+    height: 22px;
+    margin-top: -2px;
+    padding: 6px 0 6px 8px;
+    font-size: 12px;
+    color: #6a828a;
+    transition: background-color .3s ease, color .3s ease;
+    -webkit-transition: background-color .3s ease, color .3s ease;
+}
+.menu__wrap > a{
+    color: #0098ff;
+}
+.menu__wrap a:after,
+.menu__aside a:after{
+    content: '';
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 0;
+    border-bottom: 2px dotted #dcdee5;
+    z-index: 2;
+}
+.menu__btn:hover,
 .menu.active .menu__btn{
     background: #0098ff;
 }
@@ -779,25 +806,22 @@ button.estimate__dislike{
     font-size: 16px;
 }
 .menu__aside dt{
-    height: 34px;
-    margin-bottom: 9px;
-    padding-top: 8px;
-    font-size: 18px;
+    height: 18px;
+    margin-bottom: 2px;
+    padding-top: 4px;
+    font-size: 12px;
     color: #f8f3f1;
     background-color: #0098ff;
     text-transform: uppercase;
     text-align: center;
 }
-.menu__aside dl a{
-    display: block;
-    position: relative;
-    height: 30px;
-    margin-top: -2px;
-    padding: 8px 0 6px 16px;
-    font-size: 15px;
-    color: #6a828a;
-    transition: background-color .3s ease, color .3s ease;
-    -webkit-transition: background-color .3s ease, color .3s ease;
+.menu__wrap dd a,
+.menu__aside dd > a{
+    font-size: 10px;
+    padding-left: 8px;
+}
+.menu__aside dl dt+dd a:after{
+    display: none;
 }
 .menu__aside dl dd > a:hover,
 .menu__aside dl dd > .active{
@@ -807,29 +831,42 @@ button.estimate__dislike{
 .menu__aside dl ul{
     position: relative;
 }
-.menu__aside dl ul:after,
-.menu__aside dd > a:after{
+.menu__wrap ul:after,
+.menu__aside ul:after{
     content: '';
     position: absolute;
     left: 8px;
     right: 8px;
-    bottom: 0;
+    top: 0;
     border-bottom: 2px dotted #dcdee5;
     z-index: 2;
 }
-.menu__aside dd:last-child a:after{
-    display: none;
-}
-.menu__aside dl li a{
-    padding-left: 33px;
-    font-size: 14px;
+.menu__aside li a,
+.menu__wrap li a{
+    padding-left: 23px;
+    font-size: 10px;
     transition: color .3s ease;
     -webkit-transition: color .3s ease;
 }
-.menu__aside dl li a:hover{
+.menu__aside li a:hover,
+.menu__wrap li a:hover{
     color: #0098ff;
 }
-/* --------------- menu --------------- */
+.menu__wrap li a:after,
+.menu__aside li a:after{
+    display: none;
+}
+.menu.active .menu__wrap a.btn_aside{
+    padding-left: 0;
+    margin-top: 15px;
+}
+.menu.active .menu__wrap dl dd:first-child a:after{
+    display: none;
+}
+.menu.active .menu__wrap a.btn_aside:after{
+    display: none;
+}
+/* --------------- /menu --------------- */
 
 /* --------------- search --------------- */
 .search{
@@ -965,6 +1002,38 @@ button.estimate__dislike{
     border-bottom-color: #dc2d26;
 }
 /* --------------- /tabs --------------- */
+
+/* ------------ social ------------ */
+.social{
+    padding: 15px 0;
+    text-align: center;
+}
+.social a{
+    position: static!important;
+    display: inline-block!important;
+    width: 27px!important;
+    height: 30px!important;
+    background: url("../img/icons-social.png") no-repeat 0 0;
+    background-size: 55px;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+.social a:after{
+    display: none;
+}
+.social a:hover{
+    opacity: .5;
+}
+.social .fb{
+    background-position: -27px 0;
+}
+.social .gg{
+    background-position: 0 -29px;
+}
+.social .tw{
+    background-position: -29px -29px;
+}
+/* ------------ /social ------------ */
 
 /* ------------ social-2 ------------ */
 .social-2 {
@@ -1549,17 +1618,32 @@ button.estimate__dislike{
     .menu__wrap{
         left: 15px;
         width: 155px;
+        padding-top: 21px;
     }
-    .menu__wrap  .menu__home{
+    .menu__wrap a{
+        height: 26px;
+        padding-top: 9px;
+    }
+    .menu__aside dt{
+        margin-bottom: 5px;
+        padding-top: 2px;
+        font-size: 14px;
+    }
+    .menu__home{
+        position: absolute;
+        top: 7px;
+        left: 81px;
         vertical-align: middle;
-        width: 61px;
-        height: 53px;
+        width: 47px;
+        height: 42px;
         margin-right: 15px;
         border-radius: 5px 5px 0 0;
-        background: url("../img/icon-home.png") no-repeat 50% 7px #0098ff;
+        background: url("../img/icon-home.png") no-repeat 50% 7px/22px;
+        transition: background-color .3s ease;
+        -webkit-transition: background-color .3s ease;
     }
-    .menu__wrap  .menu__home:hover{
-
+    .menu__home:hover{
+        background-color:  #0098ff;
     }
     /* --------------- /menu --------------- */
 
@@ -2013,16 +2097,20 @@ button.estimate__dislike{
         display: none;
     }
     .menu__wrap{
+        display: inline-block;
+        vertical-align: top;
         position: static;
         width: auto;
+        padding-top: 0;
         background: transparent;
         box-shadow: none;
         opacity: 1;
         visibility: visible;
     }
-    .menu__wrap a{
+    .menu__wrap > a{
         display: inline-block;
         padding-top: 19px;
+        padding-left: 0;
         font-size: 18px;
         margin-right: 27px;
         color: #0098ff;
@@ -2032,8 +2120,51 @@ button.estimate__dislike{
     .menu__wrap a:hover{
         color: #f8f3f1;
     }
+    .menu__wrap > a:after{
+        display: none;
+    }
     .menu__wrap .aside__layout{
         display: none;
+    }
+    .menu__aside dt{
+        height: 34px;
+        margin-bottom: 9px;
+        padding-top: 8px;
+        font-size: 18px;
+    }
+    .menu__wrap dd a,
+    .menu__aside dd > a {
+        display: block;
+        height: 29px;
+        font-size: 15px;
+        padding-top: 9px;
+        padding-left: 16px;
+    }
+    .menu__aside ul{
+        padding: 5px 0;
+    }
+    .menu__aside li a,
+    .menu__wrap li a{
+        height: 27px;
+        font-size: 13px;
+        padding-left: 33px;
+    }
+    .menu__aside .btn_aside{
+        height: 33px;
+        margin-top: 15px;
+        padding-top: 9px;
+        font-size: 15px;
+    }
+    .menu__aside .btn_aside:after{
+        display: none;
+    }
+    .menu__home{
+        position: static;
+        display: inline-block;
+        width: 61px;
+        height: 53px;
+        background-size: auto;
+        vertical-align: middle;
     }
     /* --------------- /menu --------------- */
 
@@ -2070,7 +2201,7 @@ button.estimate__dislike{
         top: 11px;
         right: 3px;
         width: 29px;
-        height: 28px;
+        height: 32px;
         background-size: 22px 23px;
     }
     /* --------------- /search --------------- */
@@ -2091,4 +2222,44 @@ button.estimate__dislike{
         font-size: 12px;
     }
     /* --------------- /mama-metr --------------- */
+
+
+    /* ------------ social ------------ */
+    .social{
+        position: relative;
+        width: 188px;
+        height: 188px;
+        margin: 40px auto 0;
+        background: url("../img/bg-social.png") no-repeat 0 0;
+    }
+    .menu__aside .social a{
+        position: absolute!important;
+        top: 50px;
+        left: 53px;
+        display: block!important;
+        width: 36px!important;
+        height: 47px!important;
+        background: url("../img/icons-social.png") no-repeat 0 0;
+        transition: opacity .3s ease;
+        -webkit-transition: opacity .3s ease;
+    }
+    .menu__aside .social a:hover{
+        opacity: .5;
+    }
+    .menu__aside .social a.fb{
+        top: 50px;
+        left: 98px;
+        background-position: -45px 0;
+    }
+    .menu__aside .social a.gg{
+        top: 95px;
+        left: 53px;
+        background-position: 0 -45px;
+    }
+    .menu__aside .social a.tw{
+        top: 95px;
+        left: 98px;
+        background-position: -45px -45px;
+    }
+    /* ------------ /social ------------ */
 }
