@@ -1222,6 +1222,7 @@ button.estimate__dislike{
     margin-top: 10px;
 }
 .warning__item{
+    position: relative;
     width: 225px;
     height: 275px;
     display: inline-block;
@@ -1229,9 +1230,9 @@ button.estimate__dislike{
     vertical-align: top;
     padding: 14px 22px 22px 22px;
     border: 1px solid #e9e8e8;
-    box-shadow: 8px 8px 23px #e9e8e8;
+    box-shadow: 5px 5px 23px #e9e8e8;
 }
-.warning__item__pic{
+.warning__item__pic div{
     height:90px;
     margin-bottom: 20px;
     background-repeat: no-repeat;
@@ -1246,7 +1247,7 @@ button.estimate__dislike{
 .warning__item .btn_play:hover {
     background: #f17b76;
 }
-.warning__item>div{
+.warning__item__pic{
     height: 143px;
     border: 1px solid #e9e8e8;
     background: #fff;
@@ -1254,6 +1255,17 @@ button.estimate__dislike{
     border-radius: 3px;
     padding: 29px 11px 21px 20px;
     margin-bottom: 10px;
+}
+.warning__item .mama-metr {
+    width: 100%;
+    padding: 0 27px;
+    position: relative;
+    display: block;
+    margin: 12px 0;
+    top: 0;
+}
+.warning__item .mama-metr__value > .red:before {
+    background:none;
 }
 /*--------------/warning--------------*/
 
@@ -1317,60 +1329,6 @@ button.estimate__dislike{
     user-select: none;
 }
 /*-------------- /nice-checkbox --------------*/
-
-/*-------------- warning --------------*/
-.warning .site__caption {
-    font-size: 20px;
-}
-.warning-title {
-    font-size: 23.5px;
-}
-.warning .site__caption:before,
-.warning .site__caption:after {
-    border-radius: 4px;
-    width: 32px;
-    top: 5px;
-    height: 34px;
-}
-.warning .site__caption {
-    margin-bottom: 14px;
-}
-.warning-title {
-    padding: 10px 0 36px 0;
-}
-.warning .warning__software p:last-child,
-.warning .warning__software p {
-    letter-spacing: 1.1px;
-    margin-left: 196px;
-    border-top: 2px dotted #e9e8e8;
-    margin-bottom: 0;
-    border-bottom: none;
-    padding-top: 10px;
-    line-height: 16px;
-    padding-bottom: 11px;
-}
-.warning .warning__software p:first-child{
-    padding-top: 19px;
-}
-.warning__software__title {
-    margin-left: 7px;
-    border-bottom:none;
-    margin-bottom: 1px;
-}
-.warning__pic {
-    width: 179px;
-    height: 143px;
-    padding: 18px 34px 14px 31px;
-    margin: 0 10px 4px 0;
-}
-.warning__software__title span {
-    padding-left: 19px;
-}
-.warning__item {
-    width: 230px;
-    margin: 0 5px 10px 5px;
-}
-/*-------------- /warning --------------*/
 
 @media (min-width: 768px){
     /* ------------ btn ------------ */
@@ -1839,6 +1797,72 @@ button.estimate__dislike{
         left: 4px;
     }
     /*--------------/pagination--------------*/
+
+    /*-------------- warning --------------*/
+    .warning .site__caption {
+        font-size: 20px;
+    }
+    .warning-title {
+        font-size: 23.5px;
+    }
+    .warning .site__caption:before,
+    .warning .site__caption:after {
+        border-radius: 4px;
+        width: 32px;
+        top: 5px;
+        height: 34px;
+    }
+    .warning .site__caption {
+        margin-bottom: 14px;
+    }
+    .warning-title {
+        padding: 10px 0 36px 0;
+    }
+    .warning .warning__software p:last-child,
+    .warning .warning__software p {
+        letter-spacing: 0.9px;
+        border-top: 2px dotted #e9e8e8;
+        margin-left: 196px;
+        margin-bottom: 0;
+        border-bottom: none;
+        padding-top: 9px;
+        line-height: 16px;
+        padding-bottom: 11px;
+    }
+    .warning .warning__software p:first-child{
+        padding-top: 19px;
+
+    }
+    .warning .warning__software p:last-child {
+        margin-bottom: 10px;
+    }
+    .warning__software__title {
+        margin-left: 7px;
+        border-bottom: none;
+        margin-bottom: 10px;
+    }
+    .warning__pic {
+        width: 179px;
+        height: 143px;
+        padding: 18px 34px 14px 31px;
+        margin: 0 10px 4px 0;
+    }
+    .warning__software__title span {
+        padding-left: 19px;
+    }
+    .warning__item {
+        width: 227px;
+        margin: 0 5px 10px 5px;
+    }
+    .warning .site__content-head {
+        margin: 0 -5px 13px -4px;
+    }
+
+    .warning__item .mama-metr {
+        width: 185px;
+        padding: 0 0 0 56px;
+    }
+    /*-------------- /warning --------------*/
 }
 
 @media (min-width: 950px){
@@ -2057,8 +2081,24 @@ button.estimate__dislike{
     /* --------------- /game-item --------------- */
 
     /* --------------- warning --------------- */
+    .warning__pic {
+        width: 182px;
+        height: 147px;
+    }
     .warning__item {
         width: 222px;
+        padding: 13px 21px 22px 21px;
+    }
+    .warning__item .mama-metr {
+        width: 185px;
+        padding: 0 11px 0 42px;
+    }
+    .warning .warning__software p:last-child, .warning .warning__software p {
+        letter-spacing: 0.2px;
+        margin-left: 198px;
+        line-height: 17px;
+        font-size: 14px;
+        padding-bottom: 7px;
     }
     /* --------------- /warning --------------- */
 
