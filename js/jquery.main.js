@@ -21,30 +21,22 @@ $(function(){
         new Rating( $(this) );
     } );
 
+    $('.mama-metr__value').each(function(){
+        var element_parent = $(this),
+            element_child = element_parent.children('div'),
+            element_parent_width = element_parent.width(),
+            element_child_width = element_child.width();
 
-    $(window).on({
-        'load':function() {
+        var element_width = (element_child_width / element_parent_width) * 100;
 
-            $.each( $('.mama-metr__value'), function(){
-
-                var element_parent = $(this),
-                    element_child = element_parent.children('div'),
-                    element_parent_width = element_parent.width(),
-                    element_child_width = element_child.width();
-
-                var element_width = (element_child_width / element_parent_width) * 100;
-
-                if (element_width <= 20) {
-                    element_child.addClass('grey');
-                }
-                else if (element_width > 20 && element_width <= 60) {
-                    element_child.addClass('blue');
-                }
-                else if (element_width > 40 && element_width <= 100) {
-                    element_child.addClass('red');
-                }
-
-            } );
+        if (element_width <= 20) {
+            element_child.addClass('grey');
+        }
+        else if (element_width > 20 && element_width <= 60) {
+            element_child.addClass('blue');
+        }
+        else if (element_width > 40 && element_width <= 100) {
+            element_child.addClass('red');
         }
     });
 
@@ -78,59 +70,58 @@ $(function(){
         }
     }
 
-    var subMenu = function (obj) {
-        //private properties
-        var _obj = obj,
-            _site = $('.site'),
-            _btn = _obj.children('a'),
-            _sub = _obj.children('ul'),
-            _window = $(window),
+} );
+
+var subMenu = function (obj) {
+    //private properties
+    var _obj = obj,
+        _site = $('.site'),
+        _btn = _obj.children('a'),
+        _sub = _obj.children('ul'),
+        _window = $(window),
+        _windowWidth = $(window).width();
+
+    //private methods
+    var _addEvents = function () {
+
             _windowWidth = $(window).width();
 
-        //private methods
-        var _addEvents = function () {
-
-                _windowWidth = $(window).width();
-
-                _window.on({
-                    resize: function () {
-                        if(_windowWidth<=749){
-                            //$('.header__menu li').removeClass('active');
-                            //$('.header__menu li ul').css('display','none');
-                            _sub.css('display','block');
-                        }
+            _window.on({
+                resize: function () {
+                    if(_windowWidth<=749){
+                        //$('.header__menu li').removeClass('active');
+                        //$('.header__menu li ul').css('display','none');
+                        _sub.css('display','block');
                     }
-                });
+                }
+            });
 
-                _btn.on({
-                    click: function () {
-                        if(_windowWidth<=749) {
-                            if (_obj.hasClass('mobile-active')) {
-                                _sub.slideUp(500);
-                                _obj.removeClass('mobile-active');
-                            } else {
-                                $('.menu li').removeClass('mobile-active');
-                                $('.menu li ul').slideUp(500);
-                                $(this).parent('li').addClass('mobile-active');
-                                _sub.slideDown(500);
-                            }
-                            return false
+            _btn.on({
+                click: function () {
+                    if(_windowWidth<=749) {
+                        if (_obj.hasClass('mobile-active')) {
+                            _sub.slideUp(500);
+                            _obj.removeClass('mobile-active');
+                        } else {
+                            $('.menu li').removeClass('mobile-active');
+                            $('.menu li ul').slideUp(500);
+                            $(this).parent('li').addClass('mobile-active');
+                            _sub.slideDown(500);
                         }
+                        return false
                     }
-                });
-            },
-            _init = function () {
-                _addEvents();
-            };
+                }
+            });
+        },
+        _init = function () {
+            _addEvents();
+        };
+    //public properties
 
-        //public properties
+    //public methods
 
-        //public methods
-
-        _init();
-    };
-
-} );
+    _init();
+};
 
 var Rating = function (obj) {
 
