@@ -1258,7 +1258,7 @@ button.estimate__dislike{
 }
 .warning__item .mama-metr {
     width: 100%;
-    padding: 0 27px;
+    padding: 0 24px;
     position: relative;
     display: block;
     margin: 12px 0;
@@ -1859,7 +1859,7 @@ button.estimate__dislike{
     }
 
     .warning__item .mama-metr {
-        width: 185px;
+        width: 187px;
         padding: 0 0 0 56px;
     }
     /*-------------- /warning --------------*/
