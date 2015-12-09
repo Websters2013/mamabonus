@@ -824,12 +824,15 @@ button.estimate__dislike{
     display: none;
 }
 .menu__aside dl dd > a:hover,
-.menu__aside dl dd > .active{
+.menu__aside dl dd.active > a{
     color: #000;
     background-color: #e9e8e8;
 }
 .menu__aside dl ul{
+    display: none;
     position: relative;
+    top: -2px;
+    overflow: hidden;
 }
 .menu__wrap ul:after,
 .menu__aside ul:after{
@@ -2147,7 +2150,7 @@ button.estimate__dislike{
     .menu__wrap > a:after{
         display: none;
     }
-    .menu__wrap .aside__layout{
+    .menu__wrap .menu__aside{
         display: none;
     }
     .menu__aside dt{
@@ -2177,6 +2180,7 @@ button.estimate__dislike{
         height: 33px;
         margin-top: 15px;
         padding-top: 9px;
+        padding-left: 0;
         font-size: 15px;
     }
     .menu__aside .btn_aside:after{
@@ -2269,7 +2273,7 @@ button.estimate__dislike{
         position: relative;
         width: 188px;
         height: 188px;
-        margin: 40px auto 0;
+        margin: 40px auto 30px;
         background: url("../img/bg-social.png") no-repeat 0 0;
     }
     .menu__aside .social a{

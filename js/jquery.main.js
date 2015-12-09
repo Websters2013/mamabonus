@@ -1,5 +1,18 @@
 $(function(){
 
+    $(window).on({
+        'load':function(){
+            if($(window).width() >= 900){
+                contentHeight()
+            }
+        },
+        'resize':function(){
+            if($(window).width() >= 900){
+                contentHeight()
+            }
+        }
+    });
+
     $('.sub-menu').each(function () {
         subMenu($(this));
     });
@@ -40,31 +53,12 @@ $(function(){
         }
     });
 
-    $(window).on({
-        'load':function(){
-            if($(window).width() >= 900){
-                $('.menu-to-aside').clone().appendTo(".site__aside");
-                $('.menu-to-aside').addClass('aside__layout');
-                $('.menu-to-aside').removeClass('menu-to-aside');
-                contentHeight()
-            }
-        },
-        'resize':function(){
-            if($(window).width() >= 900){
-                $('.menu-to-aside').clone().appendTo(".site__aside");
-                $('.menu-to-aside').addClass('aside__layout');
-                $('.menu-to-aside').removeClass('menu-to-aside');
-                contentHeight()
-            }
-        }
-    });
-
     function contentHeight() {
-        if ($('.aside__layout').length) {
-            if ($('.site__content').outerHeight() <  $('.aside__layout').outerHeight()) {
-                var elemHeight = $('.aside__layout').outerHeight() + 160;
+        if ($('.menu__aside').length) {
+            if ($('.site__content').outerHeight() <  $('.menu__aside').outerHeight()) {
+                var elemHeight = $('.menu__aside').outerHeight() + 160;
                 $('.site__content').css({
-                    height: elemHeight
+                    'min-height': elemHeight
                 });
             }
         }
@@ -82,14 +76,13 @@ var subMenu = function (obj) {
     var _addEvents = function () {
             _btn.on({
                 click: function () {
-                    console.log('sss');
-                    if (_obj.hasClass('mobile-active')) {
+                    if (_obj.hasClass('active')) {
                         _sub.slideUp(500);
-                        _obj.removeClass('mobile-active');
+                        _obj.removeClass('active');
                     } else {
-                        $('.menu li').removeClass('mobile-active');
-                        $('.menu li ul').slideUp(500);
-                        $(this).parent('li').addClass('mobile-active');
+                        $('.menu__aside dd').removeClass('active');
+                        $('.menu__aside ul').slideUp(500);
+                        $(this).parent('dd').addClass('active');
                         _sub.slideDown(500);
                     }
                     return false
