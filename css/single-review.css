@@ -131,6 +131,17 @@
     margin: 0 0 11px 2px;
     text-transform: uppercase;
 }
+.casino-info .mama-metr {
+    position: relative;
+    right: auto;
+    margin: 0 auto;
+    top: auto;
+    display: inline-block;
+    width: 145px;
+}
+.casino-info .mama-metr__value > div:before {
+    display: none;
+}
 .casino-info__secondary{
     text-align: right;
     padding: 0 2px 29px 0;
@@ -143,6 +154,7 @@
     width: 137px;
     height: 37px;
     padding-top: 12px;
+    margin: 0 0 26px;
 }
 .casino-info__logo{
     border: 1px solid #e9e8e8;
@@ -828,7 +840,10 @@
         width: 186px;
         height: 36px;
         padding-top: 12px;
-        margin: -1px 0 0;
+        margin: -1px 0 23px;
+    }
+    .casino-info .mama-metr{
+        display: block;
     }
     .casino-info__logo{
         width: 185px;
