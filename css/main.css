@@ -399,8 +399,9 @@ dd.game-item__clicks-num:before{
     height: 65px;
     margin-top: 8px;
     margin-right: 10px;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
 }
 .game-item .game-item__code{
     position: relative;
