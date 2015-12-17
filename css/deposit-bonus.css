@@ -43,6 +43,7 @@
     left: 0;
 }
 .deposit-bonus__aside p {
+    display: none;
     position: relative;
     font-size: 12px;
     color: #6a828a;
@@ -61,10 +62,11 @@
     margin-left: -79px;
 }
 .deposit-bonus__controls {
+    position: relative;
     border-bottom: 2px dotted #dcdee5;
 }
 .deposit-bonus__controls > div {
-    margin-bottom: 20px;
+    margin-bottom: 122px;
 }
 .deposit-bonus__controls > div.estimate {
     display: block;
@@ -106,6 +108,12 @@
     box-sizing: border-box;
     padding: 3px 0 0 7px;
 }
+.deposit-bonus__buttons{
+    position: absolute;
+    top: 153px;
+    left: 50%;
+    margin-left: -63px;
+}
 .deposit-bonus__buttons a {
     margin: 0 auto 20px;
     display: block;
@@ -122,6 +130,12 @@
 .deposit-bonus__games,
 .deposit-bonus__info {
     padding: 30px 20px;
+}
+.deposit-bonus__controls{
+    padding-bottom: 85px;
+}
+.deposit-bonus__info{
+    position: relative;
 }
 .deposit-bonus__categories {
     margin-bottom: 10px;
@@ -151,6 +165,18 @@
     font-size: 14px;
     color: rgb( 106, 130, 138 );
 }
+.deposit-bonus__info p{
+    font-size: 14px;
+    line-height: 18px;
+    color: rgb( 106, 130, 138 );
+}
+.deposit-bonus__code{
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    text-align: center;
+    margin-left: -77px;
+}
 .deposit-bonus__code dt {
     display: block;
     color: #2d3e50;
@@ -171,6 +197,7 @@
     color: #2d3e50;
     display: block;
     margin-bottom: 10px;
+    text-align: center;
 }
 .deposit-bonus__valid dt {
     font-size: 16px;
@@ -232,12 +259,17 @@
         padding: 12px 33px 43px;
     }
     .deposit-bonus__aside p {
+        display: block;
         margin: 124px 0 0;
+    }
+    .deposit-bonus__controls{
+        padding-bottom: 30px;
     }
     .deposit-bonus__controls > div {
         display: inline-block;
         vertical-align: top;
         width: 118px;
+        margin-bottom: 20px;
     }
     .deposit-bonus__controls > div.estimate {
         width: 84px;
@@ -251,6 +283,10 @@
     .deposit-bonus__controls > div.deposit-bonus__cash {
         margin: 0 15px 0 0;
     }
+    .deposit-bonus__buttons{
+        position: static;
+        margin-left: 0;
+    }
     .deposit-bonus__buttons a {
         width: 132px;
     }
@@ -261,6 +297,9 @@
     .deposit-bonus__info {
         padding: 20px 5px;
     }
+    .deposit-bonus__info p{
+        display: none;
+    }
     .deposit-bonus__categories {
         display: inline-block;
         vertical-align: top;
@@ -268,9 +307,12 @@
         margin: 0 15px 0 0;
     }
     .deposit-bonus__code {
+        position: static;
         display: inline-block;
         vertical-align: top;
         max-width: 190px;
+        margin-left: auto;
+        text-align: inherit;
     }
     .deposit-bonus__valid,
     .deposit-bonus__games {
@@ -293,6 +335,7 @@
         display: inline-block;
         vertical-align: top;
         width: 25%;
+        text-align: left;
     }
     /* ------------ /deposit-bonus ------------ */
 
