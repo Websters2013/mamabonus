@@ -2472,10 +2472,10 @@ button.estimate__dislike{
     text-align: center;
     padding: 16px 0 0;
 }
-.packages__rate span{
+.packages__rate>span{
     display: block;
 }
-.packages__rate span:first-child{
+.packages__rate>span:first-child{
     color: #dc2d26;
     margin: 0 0 12px;
 }
@@ -2490,6 +2490,24 @@ button.estimate__dislike{
     padding: 624px 122px 0 23px;
     text-align: left;
     margin: 0 auto 33px;
+    position: relative;
+}
+.packages__rate>div>span{
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    color: #fff;
+    font-size: 54px;
+    line-height: 54px;
+    font-family: "helvetica-regular", sans-serif;
+    width: 90px;
+}
+.packages__rate>div>span>span{
+    display: block;
+    font-size: 26px;
+    line-height: 34px;
+    text-transform: none;
+    padding: 0 0 0 10px;
 }
 /* --------------- /packages --------------- */
 
@@ -4151,6 +4169,18 @@ button.estimate__dislike{
         padding: 731px 142px 0 24px;
         margin: 0 0 20px 18px;
     }
+    .packages__rate>div>span{
+        top: 8px;
+        left: 22px;
+        font-size: 63px;
+        line-height: 63px;
+        width: 116px;
+    }
+    .packages__rate>div>span>span {
+        font-size: 31px;
+        line-height: 43px;
+        padding: 0 0 0 10px;
+    }
     /* --------------- /packages --------------- */
 
     /* --------------- latest-bonuses --------------- */
@@ -4994,6 +5024,20 @@ button.estimate__dislike{
         line-height: 9px;
         padding: 364px 72px 0 13px;
         margin: 0 0 8px 0;
+    }
+    .packages__rate>div>span {
+        top: 4px;
+        left: 11px;
+        font-size: 32px;
+        line-height: 32px;
+        width: 56px;
+    }
+    .packages__rate>div>span>span {
+        display: block;
+        font-size: 15px;
+        line-height: 20px;
+        text-transform: none;
+        padding: 0 0 0 5px;
     }
     /* --------------- /packages --------------- */
 
