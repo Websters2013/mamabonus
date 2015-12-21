@@ -13,6 +13,10 @@ $(function(){
         }
     });
 
+    $('.tabs').each(function () {
+        Slider($(this));
+    });
+
     $('.sub-menu').each(function () {
         subMenu($(this));
     });
@@ -65,6 +69,69 @@ $(function(){
     }
 
 } );
+
+var Slider = function (obj) {
+
+    //private properties
+    var _self = this,
+        _next = obj.find($('.swiper-button-next')),
+        _prev = obj.find($('.swiper-button-prev')),
+        _window = $(window),
+        _windowWidth = $(window).width(),
+        _swiper = null,
+        _obj = obj;
+
+
+    //private methods
+    var _addEvents = function () {
+
+        },
+        _init = function () {
+            _addEvents();
+        };
+    if (_obj.hasClass('tabs')){
+        _window.on({
+            load: function () {
+                if (_windowWidth <= 750) {
+                    _swiper = new Swiper(_obj, {
+                        slidesPerView: 'auto',
+                        loopedSlides: 40,
+                        loop: true,
+                        paginationClickable: true,
+                        nextButton: _next,
+                        prevButton: _prev
+                    });
+                }
+            },
+            resize: function () {
+                _windowWidth = $(window).width();
+                console.log(_windowWidth);
+                if (_windowWidth <= 750) {
+                    if(_swiper===null)
+                        _swiper = new Swiper(_obj, {
+                            slidesPerView: 'auto',
+                            loopedSlides: 40,
+                            loop: true,
+                            paginationClickable: true,
+                            nextButton: _next,
+                            prevButton: _prev
+                        });
+                } else {
+                    if(_swiper!==null){
+                        _swiper.destroy(false,true);
+                        _swiper = null;
+                    }
+                }
+            }
+
+        })
+    }
+    //public properties
+
+    //public methods
+
+    _init();
+};
 
 var subMenu = function (obj) {
     //private properties

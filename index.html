@@ -8,6 +8,7 @@
     <meta name="format-detection" content="address=no">
 
     <title>Title</title>
+    <link rel="stylesheet" href="css/swiper.min.css" />
     <link rel="stylesheet" href="css/main.css" />
     
 </head>
@@ -246,12 +247,18 @@
                 
                 <!--tabs-->
                 <div class="tabs">
-                    <a href="#">All</a>
-                    <a href="#">First Deposit</a>
-                    <a href="#">No Deposit</a>
-                    <a href="#">Match Free</a>
-                    <a href="#">Spins Tournament</a>
-                    <a href="#">Free Play</a>
+                    <a href="#" class="swiper-button-prev"></a>
+                    <!--swiper-wrapper-->
+                    <div class="swiper-wrapper">
+                        <a href="#" class="swiper-slide">All</a>
+                        <a href="#" class="swiper-slide">First Deposit</a>
+                        <a href="#" class="swiper-slide">No Deposit</a>
+                        <a href="#" class="swiper-slide">Match Free</a>
+                        <a href="#" class="swiper-slide">Spins Tournament</a>
+                        <a href="#" class="swiper-slide">Free Play</a>
+                    </div>
+                    <!--swiper-wrapper-->
+                    <a href="#" class="swiper-button-next"></a>
                 </div>
                 <!--/tabs-->
 
@@ -724,6 +731,7 @@
     </div>
     <!-- /site -->
     <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/jquery.main.js"></script>
 </body>
 </html>
