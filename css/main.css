@@ -2041,6 +2041,24 @@ button.estimate__dislike{
 
 @media (min-width: 950px){
 
+    /* ------------ site__woman ------------ */
+    .site__woman{
+        position: absolute;
+        top: 200px;
+        width: 559px;
+        height: 956px;
+        background-repeat: no-repeat;
+    }
+    .site__woman_left{
+        right: 100%;
+        background-position: 0 0;
+    }
+    .site__woman_right{
+        left: 100%;
+        background-position: 100% 0;
+    }
+    /* ------------ /site__woman ------------ */
+
     /* ------------ btn ------------ */
     .btn_home {
         width: 189px;
