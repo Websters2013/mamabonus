@@ -2495,19 +2495,19 @@ button.estimate__dislike{
 .packages__rate>div>span{
     position: absolute;
     top: 8px;
-    left: 20px;
+    left: 0;
     color: #fff;
     font-size: 54px;
     line-height: 54px;
     font-family: "helvetica-regular", sans-serif;
-    width: 90px;
+    width: 131px;
+    text-align: center;
 }
 .packages__rate>div>span>span{
     display: block;
     font-size: 26px;
     line-height: 34px;
     text-transform: none;
-    padding: 0 0 0 10px;
 }
 /* --------------- /packages --------------- */
 
@@ -4158,7 +4158,7 @@ button.estimate__dislike{
         font-size: 25px;
         line-height: 32px;
     }
-    .packages__rate span {
+    .packages__rate>span {
         width: 190px;
     }
     .packages__rate>div {
@@ -4171,15 +4171,14 @@ button.estimate__dislike{
     }
     .packages__rate>div>span{
         top: 8px;
-        left: 22px;
+        left: 0;
         font-size: 63px;
         line-height: 63px;
-        width: 116px;
+        width: 153px;
     }
     .packages__rate>div>span>span {
         font-size: 31px;
         line-height: 43px;
-        padding: 0 0 0 10px;
     }
     /* --------------- /packages --------------- */
 
@@ -5011,10 +5010,10 @@ button.estimate__dislike{
         font-size: 12px;
         line-height: 17px;
     }
-    .packages__rate span {
+    .packages__rate>span {
         width: 68px;
     }
-    .packages__rate span:first-child {
+    .packages__rate>span:first-child {
         margin: 0 0 5px;
     }
     .packages__rate>div {
@@ -5027,17 +5026,13 @@ button.estimate__dislike{
     }
     .packages__rate>div>span {
         top: 4px;
-        left: 11px;
         font-size: 32px;
         line-height: 32px;
-        width: 56px;
+        width: 77px;
     }
     .packages__rate>div>span>span {
-        display: block;
         font-size: 15px;
         line-height: 20px;
-        text-transform: none;
-        padding: 0 0 0 5px;
     }
     /* --------------- /packages --------------- */
 
