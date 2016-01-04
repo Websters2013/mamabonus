@@ -13,7 +13,7 @@ $(function(){
         }
     });
 
-    $('.tabs').each(function () {
+    $('.tabs-wrap').each(function () {
         Slider($(this));
     });
 
@@ -74,13 +74,9 @@ var Slider = function (obj) {
 
     //private properties
     var _self = this,
-        _next = obj.find($('.swiper-button-next')),
-        _prev = obj.find($('.swiper-button-prev')),
-        _window = $(window),
-        _windowWidth = $(window).width(),
-        _swiper = null,
+        _next = obj.parent().find($('.swiper-button-next')),
+        _prev = obj.parent().find($('.swiper-button-prev')),
         _obj = obj;
-
 
     //private methods
     var _addEvents = function () {
@@ -89,42 +85,14 @@ var Slider = function (obj) {
         _init = function () {
             _addEvents();
         };
-    if (_obj.hasClass('tabs')){
-        _window.on({
-            load: function () {
-                if (_windowWidth <= 750) {
-                    _swiper = new Swiper(_obj, {
-                        slidesPerView: 'auto',
-                        loopedSlides: 40,
-                        loop: true,
-                        paginationClickable: true,
-                        nextButton: _next,
-                        prevButton: _prev
-                    });
-                }
-            },
-            resize: function () {
-                _windowWidth = $(window).width();
-                console.log(_windowWidth);
-                if (_windowWidth <= 750) {
-                    if(_swiper===null)
-                        _swiper = new Swiper(_obj, {
-                            slidesPerView: 'auto',
-                            loopedSlides: 40,
-                            loop: true,
-                            paginationClickable: true,
-                            nextButton: _next,
-                            prevButton: _prev
-                        });
-                } else {
-                    if(_swiper!==null){
-                        _swiper.destroy(false,true);
-                        _swiper = null;
-                    }
-                }
-            }
-
-        })
+    if (_obj.hasClass('tabs-wrap')){
+        _swiper = new Swiper(_obj, {
+            slidesPerView: 'auto',
+            loopedSlides: 60,
+            loop: true,
+            nextButton: _next,
+            prevButton: _prev
+        });
     }
     //public properties
 
