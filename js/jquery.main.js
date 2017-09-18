@@ -1,181 +1,517 @@
-$(function(){
+( function(){
 
-    $(window).on({
-        'load':function(){
-            if($(window).width() >= 900){
-                contentHeight()
-            }
-        },
-        'resize':function(){
-            if($(window).width() >= 900){
-                contentHeight()
-            }
-        }
-    });
+    "use strict";
 
-    $('.tabs-wrap').each(function () {
-        Slider($(this));
-    });
+    $( function(){
 
-    $('.sub-menu').each(function () {
-        subMenu($(this));
-    });
+        new SearchPanel ( $( '#search' ) );
 
-    $('.menu__btn').on({
-        'click':function(){
-            var curElem = $(this).parent();
+        if ( $( '.filter' ).length == 1 ){
+            new Filter( $( '.filter' ) );
+        };
 
-            if (curElem.hasClass('active')) {
-                curElem.removeClass('active');
-            } else {
-                curElem.addClass('active');
-            }
+        $.each( $('.search-result__wrap'), function () {
+            new PageSearchResult( $(this) );
+        } );
 
-        }
-    });
-
-    $.each( $('.casino-review__rating-wrap'), function(){
-        new Rating( $(this) );
     } );
 
-    $('.mama-metr__value').each(function(){
-        var element_parent = $(this),
-            element_child = element_parent.children('div'),
-            element_parent_width = element_parent.width(),
-            element_child_width = element_child.width();
+    var SearchPanel = function( obj ) {
 
-        var element_width = (element_child_width / element_parent_width) * 100;
+        //private properties
+        var _obj = obj,
+            _btnShowMobile = _obj.find( '#search__btn-open' ),
+            _searchForm = _obj.find( '#search__form' ),
+            _searchInput = _obj.find( 'input' ),
+            _btnCancel = _obj.find( '#search__btn-cancel' ),
+            _html = $( 'html' ),
+            _body = $( 'body' ),
+            _site = $( '.site' ),
+            _window = $( window ),
+            _loadNewContent = true,
+            _request = new XMLHttpRequest();
 
-        if (element_width <= 20) {
-            element_child.addClass('grey');
-        }
-        else if (element_width > 20 && element_width <= 60) {
-            element_child.addClass('blue');
-        }
-        else if (element_width > 40 && element_width <= 100) {
-            element_child.addClass('red');
-        }
-    });
+        //private methods
+        var _onEvent = function() {
 
-    function contentHeight() {
-        if ($('.menu__aside').length) {
-            if ($('.site__content').outerHeight() <  $('.menu__aside').outerHeight()) {
-                var elemHeight = $('.menu__aside').outerHeight() + 160;
-                $('.site__content').css({
-                    'min-height': elemHeight
-                });
-            }
-        }
-    }
+                _window.on (
+                    'resize', function () {
 
-} );
+                        if ( _body.width() < 1200 ){
 
-var Slider = function (obj) {
+                            var searchPopup = _obj.find( '#search__popup' );
 
-    //private properties
-    var _self = this,
-        _next = obj.parent().find($('.swiper-button-next')),
-        _prev = obj.parent().find($('.swiper-button-prev')),
-        _obj = obj;
+                            searchPopup.css( {
+                                'left': _btnShowMobile.offset().left * -1 + 10,
+                                'width': _body.outerWidth() - 20
+                            } );
 
-    //private methods
-    var _addEvents = function () {
+                        }
 
-        },
-        _init = function () {
-            _addEvents();
-        };
-    if (_obj.hasClass('tabs-wrap')){
-        _swiper = new Swiper(_obj, {
-            slidesPerView: 'auto',
-            loopedSlides: 60,
-            loop: true,
-            nextButton: _next,
-            prevButton: _prev
-        });
-    }
-    //public properties
-
-    //public methods
-
-    _init();
-};
-
-var subMenu = function (obj) {
-    //private properties
-    var _obj = obj,
-        _btn = _obj.children('a'),
-        _sub = _obj.children('ul');
-
-    //private methods
-    var _addEvents = function () {
-            _btn.on({
-                click: function () {
-                    if (_obj.hasClass('active')) {
-                        _sub.slideUp(500);
-                        _obj.removeClass('active');
-                    } else {
-                        $('.menu__aside dd').removeClass('active');
-                        $('.menu__aside ul').slideUp(500);
-                        $(this).parent('dd').addClass('active');
-                        _sub.slideDown(500);
                     }
-                    return false
+                );
+
+                _site.on(
+                    'click', function ( e ) {
+
+                        if ( _searchForm.hasClass( 'show' ) && $( e.target ).closest( _obj ).length == 0 && _body.width() < 1200 ){
+                            _hidePanelOnMobile();
+                            _searchForm[0].reset();
+                        } else if ( $( '#search__popup' ).hasClass( 'show' ) && $( e.target ).closest( _obj ).length == 0 && _body.width() >= 1200 ){
+                            _reduceSearch();
+                            _searchForm[0].reset();
+                        }
+
+                    }
+                );
+
+                _btnShowMobile.on (
+                    'click', function () {
+                        _showPanelOnMobile();
+                        return false;
+                    }
+                );
+
+                _btnCancel.on (
+                    'click', function () {
+
+                        if ( _body.width() < 1200 ) {
+                            _hidePanelOnMobile();
+                        } else if ( _body.width() >= 1200 ) {
+                            _reduceSearch();
+                        }
+
+                        _searchForm[0].reset();
+
+                        return false;
+                    }
+                );
+
+                _searchInput.on ( {
+                    'focus': function () {
+
+                        _ajaxRequest();
+
+                    },
+                    'keyup': function( e ) {
+                        if( e.keyCode == 27 ){
+
+                        } else if( e.keyCode == 40 ){
+
+                        } else if( e.keyCode == 38 ){
+
+                        } else if ( e.keyCode == 13 ) {
+
+                        } else {
+
+                            var searchPopup = _obj.find( '#search__popup' );
+                            searchPopup.addClass( 'load' );
+                            _ajaxRequest();
+                        }
+                    }
+                } );
+
+            },
+            _ajaxRequest = function(){
+
+                _request = $.ajax( {
+                    url: 'http://demo.websters.com.ua/mama/php/header-search.php',
+                    data: {
+                        value: _searchInput.val(),
+                        loadedCount: _searchInput.val().length
+                    },
+                    dataType: 'html',
+                    type: 'GET',
+                    success: function ( data ) {
+
+                        _loadData( data );
+
+                    },
+                    error: function ( XMLHttpRequest ) {
+                        if ( XMLHttpRequest.statusText != "abort" ) {
+                            console.log( 'err' );
+                        }
+                    }
+                } );
+
+            },
+            _increaseSearch = function () {
+
+                var searchPopup = _obj.find( '#search__popup' );
+
+                _searchForm.addClass( 'increase' );
+
+                searchPopup.addClass( 'show' );
+                searchPopup.removeClass( 'load' );
+
+            },
+            _reduceSearch = function () {
+
+                var searchPopup = _obj.find( '#search__popup' );
+
+                searchPopup.removeClass( 'show' );
+
+                setTimeout( function () {
+                    _searchForm.removeClass( 'increase' );
+                }, 300 );
+
+            },
+            _showPopup = function () {
+
+                var searchPopup = _obj.find( '#search__popup' );
+
+                _html.css( 'overflow-y', 'hidden' );
+
+                searchPopup.addClass( 'show' );
+
+                searchPopup.css( {
+                    'left': _btnShowMobile.offset().left * -1,
+                    'width': _body.outerWidth()
+                } );
+
+                searchPopup.removeClass( 'load' );
+
+            },
+            _hidePopup = function () {
+
+                var searchPopup = _obj.find( '#search__popup' );
+
+                _html.removeAttr( 'style' );
+
+                searchPopup.remove( );
+
+                _loadNewContent = true;
+
+            },
+            _searchMoreLink = function () {
+
+                var searchPopup = _obj.find( '#search__popup' ),
+                    searchLinksResults =  searchPopup.find( '#search__popup-links' );
+
+                if ( _searchInput.val().length > 0 ) {
+                    searchLinksResults.find( 'span' ).html( _searchInput.val() );
+                };
+
+            },
+            _showPanelOnMobile = function () {
+
+                _searchForm.addClass( 'show' );
+                _searchForm.css( {
+                    'width': _body.outerWidth()
+                } );
+
+            },
+            _hidePanelOnMobile = function () {
+
+                _searchForm.css( {
+                    'width': 0
+                } );
+                _searchForm.removeClass( 'show' );
+
+                _hidePopup();
+
+            },
+            _showPanel = function ( onEvent ) {
+
+                _searchForm.addClass( 'show' );
+
+                if ( _body.width() < 1200 ) {
+                    _searchForm.css( {
+                        'width': _body.outerWidth()
+                    } );
+                } else if ( _body.width() >= 1200 ) {
+                    _searchForm.addClass( 'increase' );
                 }
-            });
-        },
-        _init = function () {
-            _addEvents();
-        };
-    //public properties
 
-    //public methods
+                if ( onEvent != 0 ){
 
-    _init();
-};
+                    setTimeout( function () {
+                        _searchInput.focus();
+                    }, 300 )
 
-var Rating = function (obj) {
-
-    var _obj = obj,
-        _itemRate = _obj.find('.casino-review__rating div'),
-        _hiddenInput = _obj.find('input[type="hidden"]');
-
-    var _addEvents = function () {
-
-            _itemRate.on({
-                'click': function(){
-                    var curItem = $(this),
-                        dataRate = curItem.attr('data-rate'),
-                        prevElems = curItem.prevAll('div');
-
-                    _itemRate.removeClass('active');
-                    prevElems.addClass('active');
-                    curItem.addClass('active');
-                    _hiddenInput.val(dataRate);
-                    _addClassObj();
                 }
-            });
 
-        },
-        _addClassObj = function(){
-            if(_hiddenInput.val()<=2){
-                _obj.addClass('grey_rating');
-                _obj.removeClass('blue_rating');
-                _obj.removeClass('red_rating');
-            }else if (_hiddenInput.val()>2&& _hiddenInput.val()<=6){
-                _obj.addClass('blue_rating');
-                _obj.removeClass('grey_rating');
-                _obj.removeClass('red_rating');
-            }
-            else if (_hiddenInput.val()>6&& _hiddenInput.val()<=10){
-                _obj.addClass('red_rating');
-                _obj.removeClass('grey_rating');
-                _obj.removeClass('blue_rating');
-            }
-        },
-        _init = function () {
-            _addEvents();
-        };
+            },
+            _loadData = function ( data ) {
 
-    _init();
-};
+                var arr = data;
+
+                if ( _loadNewContent ){
+
+                    _obj.append( '<div id="search__popup" class="load"><div id="search__preload"><div id="search__preload-element"></div></div></div>' )
+
+                    var searchPopup = _obj.find( '#search__popup' );
+
+                    searchPopup.prepend( arr );
+                    _loadNewContent = false;
+
+                } else {
+
+                    var searchPopup = _obj.find( '#search__popup' );
+
+                    searchPopup.empty();
+                    searchPopup.addClass( 'more' );
+                    searchPopup.append( '<div id="search__preload"><div id="search__preload-element"></div></div>' );
+                    searchPopup.prepend( arr );
+
+                }
+
+                _illumination();
+                _searchMoreLink();
+
+                if (_body.width() < 1200) {
+                    _showPopup();
+                } else if (_body.width() >= 1200) {
+                    _increaseSearch();
+                }
+
+            },
+            _illumination = function () {
+
+                var searchItems = _obj.find( '.search__popup-item i' );
+
+                searchItems.each( function () {
+
+                    $( this ).html(function( _, html ) {
+                        return html.replace( new RegExp( _searchInput.val().toLowerCase(), 'i\g' ), '<b>$&</b>' )
+                    } );
+
+                } );
+
+            },
+            _checkShow = function () {
+
+                if ( _searchForm.hasClass( 'show' ) ){
+                    _showPanel( 0 );
+
+                    var popup = _obj.find( '#search__popup' );
+
+                    if ( popup.hasClass( 'show' ) ){
+                        _showPopup();
+                    }
+
+                }
+
+            },
+            _init = function() {
+                _checkShow();
+                _onEvent();
+            };
+
+        //public properties
+
+        //public methods
+
+        _init();
+    };
+
+    var PageSearchResult = function( obj ) {
+
+        //private properties
+        var _obj = obj,
+            _btnForShow = _obj.find( '.search-result__more' ),
+            _frame = _obj.find( '.search-result__frame' ),
+            _viewNum = 5;
+
+        //private methods
+        var _onEvent = function() {
+
+                _btnForShow.on( 'click', function () {
+
+                    var curBtn = $( this );
+
+                    if ( curBtn.hasClass( 'hide-links' ) ){
+                        _showLessLinks( curBtn );
+                    } else{
+                        _showMoreLinks( curBtn );
+                    }
+
+                    return false;
+
+                } );
+
+            },
+            _showMoreLinks = function ( object ) {
+
+                var curBtn = object,
+                    curBtnText = curBtn.find( 'span' ),
+                    curLinksWrap = curBtn.prev( '.search-result__frame' ),
+                    curWrapLinks = curLinksWrap.find( '.search-result__item' ),
+                    curLinksWrapHeight = curLinksWrap.find( 'div' ).outerHeight();
+
+                curBtn.addClass( 'hide-links' );
+                curBtnText.html( 'Show Less' );
+
+                curLinksWrap.css( 'height', curLinksWrapHeight );
+
+            },
+            _showLessLinks = function ( object ) {
+
+                if ( object.length > 0 ){
+
+                    var curBtn = object;
+
+                    _frame = curBtn.prev( '.search-result__frame' );
+
+                    curBtn.removeClass( 'hide-links' );
+
+                }
+
+                _frame.each( function () {
+                    var curFrame = $( this ),
+                        curWrapLinks = curFrame.find( '.search-result__item' ),
+                        curHeight = 0,
+                        curBtn = curFrame.next( '.search-result__more' ),
+                        curBtnText = curBtn.find( 'span' );
+
+                    for ( var i = 0; i < _viewNum; i++ ){
+
+                        curHeight = curHeight + curWrapLinks.eq( i ).outerHeight();
+
+                    }
+
+                    for ( i = _viewNum; i < curWrapLinks.length; i++ ){
+
+                        curWrapLinks.eq( i ).addClass( 'hide' );
+
+                    }
+
+                    curBtnText.html( 'Show '+ ( curWrapLinks.length - _viewNum ) +' More' );
+                    curFrame.css( 'height', curHeight );
+
+                } );
+
+            },
+            _construct = function() {
+                _showLessLinks( 0 );
+                _onEvent();
+            };
+
+        //public properties
+
+        //public methods
+
+        _construct();
+    };
+
+    var Filter = function( obj ) {
+
+        //private properties
+        var _obj = obj,
+            _input = _obj.find( 'input' ),
+            _siteCasinoWrap = $( '.site__content-wrap' ),
+            _request = new XMLHttpRequest(),
+            _collectionArr = {};
+
+        //private methods
+        var _onEvent = function() {
+
+                _input.on( 'change', function () {
+                    _emptyBox();
+                } )
+
+            },
+            _emptyBox = function () {
+
+                _siteCasinoWrap.addClass( 'load' );
+                _siteCasinoWrap.html( '<div id="preload"><div id="preload-element"></div></div>' )
+                _ajaxRequest();
+
+            },
+            _dataCollection = function () {
+
+                var arr = [];
+
+                _collectionArr = {};
+
+                var filterCheckbox = _obj.find( 'input[type=checkbox]' ),
+                    sortBy = _obj.find( 'input[type=radio]:checked' );
+
+                _collectionArr['sort'] = sortBy.val();
+
+                if ( filterCheckbox.is( ':checked' ) ){
+                    _collectionArr['filter'] = filterCheckbox.val();
+                }
+
+                return JSON.stringify( _collectionArr );
+
+            },
+            _ajaxRequest = function(){
+
+                _request = $.ajax( {
+                    url: 'http://demo.websters.com.ua/mama/php/bonus-content.php',
+                    data: {
+                        filter: _dataCollection()
+                    },
+                    dataType: 'html',
+                    type: 'GET',
+                    success: function ( data ) {
+
+                        _loadData( data );
+
+                    },
+                    error: function ( XMLHttpRequest ) {
+                        if ( XMLHttpRequest.statusText != "abort" ) {
+                            console.log( 'err' );
+                        }
+                    }
+                } );
+
+            },
+            _addNewItems = function ( data ) {
+
+                var content = data;
+
+                _siteCasinoWrap.html( content );
+
+                var newItem = _siteCasinoWrap.find( '.new' );
+
+                newItem.each( function ( i ) {
+
+                    var curItem = $( this );
+
+                    _showNewItems( curItem, i );
+
+                } );
+
+            },
+            _showNewItems = function ( item, index ) {
+
+                var curItem = item;
+
+                setTimeout( function() {
+
+                    curItem.removeClass( 'new' );
+                }, 50 * index );
+
+            },
+            _loadData = function ( data ) {
+
+                _siteCasinoWrap.removeClass( 'load' );
+
+                var data = JSON.parse( data ),
+                    content = data.html;
+
+                _addNewItems( content );
+
+                var reset = _siteCasinoWrap.find( '#site-result__reset' );
+
+                reset.on( 'click', function () {
+                    _obj[0].reset();
+                    _emptyBox();
+                } )
+
+            },
+            _init = function() {
+                _onEvent();
+                _emptyBox();
+            };
+
+        //public properties
+
+        //public methods
+
+        _init();
+    };
+
+} )();

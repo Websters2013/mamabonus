@@ -18,7 +18,7 @@
     <title>MAMABONUS.COM - Hottest Casino Bonus Codes! </title>
     <meta name="description" content="HOTTEST CASINO BONUS CODES! Exclusive Bonus Offers, Casino Blog and the NEWEST CASINO BONUSES for September 2017! Check out our SPECIAL BONUSES! ">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="http://demo.websters.com.ua/mama/css/main.css"/>
+    <link rel="stylesheet" href="http://localhost/mamabonus/css/main.css"/>
 
 </head>
 <body>
@@ -27,7 +27,6 @@
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="site" data-page="index">
-
     <header class="site__header">
         <div class="site__header-layout">
 
@@ -59,7 +58,7 @@
                     </svg>
                 </a>
 
-                <form id="search__form">
+                <form id="search__form" class="show">
 
                     <input type="input" placeholder="Search"/>
                     <button type="submit" id="search__btn-find">
@@ -74,7 +73,6 @@
 
         </div>
     </header>
-
     <div class="site__content" id="site-container">
         <aside class="site__aside">
             <div class="menu__aside">
@@ -4441,130 +4439,23 @@
         </aside>
         <div class="site__content-layout">
 
-            <h1 class="site__caption">
-                MAMABONUS CASINO BONUS BLOG <br/>
-                <span class="subtitle_home">23 New Bonuses Today</span>
-            </h1>
-            <div class="bonuses_wrap">
+            <div id="search-result">
 
-                <script>
-                    function showRemainingTime() {
-                        var midnight = new Date();
-                        midnight.setHours( 24 );
-                        midnight.setMinutes( 0 );
-                        midnight.setSeconds( 0 );
-                        midnight.setMilliseconds( 0 );
+                <div id="search-result__btn-wrap">
 
-                        var current_time = new Date().getTime();
-                        var total_minutes = Math.floor(((midnight.getTime() - current_time)/1000)/60);
-                        var hours = Math.floor(total_minutes/60);
-                        var minutes = total_minutes - (hours*60);
-                        var seconds = Math.ceil(((midnight.getTime() - current_time)/1000) - total_minutes*60);
+                    <a href="#" class="btn btn_2">
+                        <svg viewBox="368 16 14 14"><path d="M18.16,10.2v1.768H7.554l4.861,4.861L11.16,18.08l-7-7,7-7,1.255,1.255L7.554,10.2Z" transform="translate(363.84 11.92)"/></svg>
+                        Back
+                    </a>
 
-                        var list = document.getElementsByClassName("timer");
-                        for(var i=0; i<list.length; i++) {
-                            list[i].innerHTML = (hours>9?hours:"0"+hours)+"h : "+(minutes>9?minutes:"0"+minutes)+"m: "+(seconds>9?seconds:"0"+seconds)+"s";
-                        }
-                    }
-                    function clickBonus(bonus_id){
-
-                        $.ajax({
-                            url: abs_url+"ajax_func.php",
-                            type: "get",
-                            data: {'type':'bonus_click',  'data':bonus_id},
-                            success: function (response) {
-                                if(response !== ''){
-                                    document.getElementById('display_clicks_'+bonus_id).innerHTML = response;
-                                }
-                            }
-                        });
-                    }
-                </script>
-                <div class="expiring_bonus_container">
-                    <div class="expiring_bonuses">
-                        <div><img src="files/img/hot-icon.png" width="21" height="22"> <span class="hot_title"> EXPIRING TODAY </span></div>
-                        <div style="width:100%;background-color:#fafafa;">
-<span class="expiring_bonus_timer_mobile">
-<span><img src="files/img/timer-icon.png" width="20" height="25"></span> &nbsp;
-<span>Time Remaining</span> &nbsp;
-<span class="timer exp_24"><span class="desc_item list_item countdown exp_green" "><span class="count_hours">20</span><span class="count_letter">h</span> : <span class="count_minutes">39</span><span class="count_letter">m</span> : <span class="count_seconds">42</span><span class="count_letter">s</span></span></span>
-                            </span>
-                        </div>
-                        <table>
-                            <tr>
-                                <td>
-                                    <a class="hot_item" href="https://www.mamabonus.com/b81510/25-no-deposit-bonus-royal-ace-casino-2017">
-                                        $25 No Deposit Bonus at Royal Ace Casino </a>
-                                </td>
-                                <td onClick="clickBonus(81510)"><span>W83GV</span></td>
-                                <td><img src="files/img/icons-clicks.png" width="14" height="18"/></td>
-                                <td id="display_clicks_81510">50</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a class="hot_item" href="https://www.mamabonus.com/b81410/25-no-deposit-bonus-casinomax-2017">
-                                        $25 No Deposit Bonus at CasinoMax </a>
-                                </td>
-                                <td onClick="clickBonus(81410)"><span>BIGFREE25</span></td>
-                                <td><img src="files/img/icons-clicks.png" width="14" height="18"/></td>
-                                <td id="display_clicks_81410">45</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a class="hot_item" href="https://www.mamabonus.com/b81646/25-no-deposit-bonus-planet-7-casino-2017">
-                                        $25 No Deposit Bonus at Planet 7 Casino </a>
-                                </td>
-                                <td onClick="clickBonus(81646)"><span>C6863</span></td>
-                                <td><img src="files/img/icons-clicks.png" width="14" height="18"/></td>
-                                <td id="display_clicks_81646">36</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="expiring_bonus_timer_desktop">
-                        <img src="files/img/timer-icon.png" width="20" height="25"><br/>
-                        Time Remaining<br/><br/>
-                        <span class="timer exp_24"><span class="desc_item list_item countdown exp_green" "><span class="count_hours">20</span><span class="count_letter">h</span> : <span class="count_minutes">39</span><span class="count_letter">m</span> : <span class="count_seconds">42</span><span class="count_letter">s</span></span></span>
-                    </div>
                 </div>
 
-                <form method="#" action="/" class="filter">
-
-                    <div class="filter__layout">
-
-                        <div class="filter__topic">FILTER BY</div>
-
-                        <label class="filter__checkbox">
-                            <input type="checkbox"/>
-                            <span>Free Bonus</span>
-                        </label>
-
-                    </div>
-
-                    <div>
-                        <div class="filter__topic">SORT BY</div>
-
-                        <label class="filter__radio">
-                            <input type="radio" name="sort" checked/>
-                            <span>Relevant</span>
-                        </label>
-                        <label class="filter__radio">
-                            <input type="radio" name="sort"/>
-                            <span>Newest</span>
-                        </label>
-
-                    </div>
-
-                </form>
-
-                <!-- site__content-wrap -->
-                <div class="site__content-wrap"></div>
-                <!-- /site__content-wrap -->
+                <h1 id="search-result__title">SORRY, WE FOUND NO RESULTS FOR “<span>FEGRT</span>”</h1>
 
             </div>
 
         </div>
     </div>
-
     <footer class="site__footer">
         <div class="site__footer-layout">
             <a href="https://www.mamabonus.com/" class="site__footer-logo">
@@ -4587,12 +4478,10 @@
             </div>
         </div>
     </footer>
-
 </div>
-
-<!--<span class="controller" data-page="index" data-abs-url="https://www.mamabonus.com/"></span>-->
+<span class="controller" data-page="index" data-abs-url="https://www.mamabonus.com/"></span>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script async src="https://www.mamabonus.com/resources/js/jquery.main.js"></script>
-<script async src="http://demo.websters.com.ua/mama/js/jquery.main.js"></script>
+<script async src="http://localhost/mamabonus/js/jquery.main.js"></script>
 </body>
 </html>
