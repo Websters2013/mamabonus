@@ -37,7 +37,7 @@
                 _window.on (
                     'resize', function () {
 
-                        if ( _body.width() < 1200 ){
+                        if ( _body.width() < 975 ){
 
                             var searchPopup = _obj.find( '#search__popup' );
 
@@ -54,10 +54,10 @@
                 _site.on(
                     'click', function ( e ) {
 
-                        if ( _searchForm.hasClass( 'show' ) && $( e.target ).closest( _obj ).length == 0 && _body.width() < 1200 ){
+                        if ( _searchForm.hasClass( 'show' ) && $( e.target ).closest( _obj ).length == 0 && _body.width() < 975 ){
                             _hidePanelOnMobile();
                             _searchForm[0].reset();
-                        } else if ( $( '#search__popup' ).hasClass( 'show' ) && $( e.target ).closest( _obj ).length == 0 && _body.width() >= 1200 ){
+                        } else if ( $( '#search__popup' ).hasClass( 'show' ) && $( e.target ).closest( _obj ).length == 0 && _body.width() >= 975 ){
                             _reduceSearch();
                             _searchForm[0].reset();
                         }
@@ -75,9 +75,9 @@
                 _btnCancel.on (
                     'click', function () {
 
-                        if ( _body.width() < 1200 ) {
+                        if ( _body.width() < 975 ) {
                             _hidePanelOnMobile();
-                        } else if ( _body.width() >= 1200 ) {
+                        } else if ( _body.width() >= 975 ) {
                             _reduceSearch();
                         }
 
@@ -139,10 +139,14 @@
 
                 var searchPopup = _obj.find( '#search__popup' );
 
-                _searchForm.addClass( 'increase' );
+                _obj.addClass( 'increase' );
 
-                searchPopup.addClass( 'show' );
-                searchPopup.removeClass( 'load' );
+                setTimeout( function () {
+
+                    searchPopup.addClass( 'show' );
+                    searchPopup.removeClass( 'load' );
+
+                }, 300 );
 
             },
             _reduceSearch = function () {
@@ -152,7 +156,7 @@
                 searchPopup.removeClass( 'show' );
 
                 setTimeout( function () {
-                    _searchForm.removeClass( 'increase' );
+                    _obj.removeClass( 'increase' );
                 }, 300 );
 
             },
@@ -200,28 +204,27 @@
                     'width': _body.outerWidth()
                 } );
 
+                setTimeout( function () {
+                    _searchInput.focus();
+                }, 300 );
+
             },
             _hidePanelOnMobile = function () {
 
-                _searchForm.css( {
-                    'width': 0
-                } );
-                _searchForm.removeClass( 'show' );
-
                 _hidePopup();
+
+                setTimeout( function () {
+                    _searchForm.css( {
+                        'width': 0
+                    } );
+                    _searchForm.removeClass( 'show' );
+                }, 300 );
 
             },
             _showPanel = function ( onEvent ) {
 
                 _searchForm.addClass( 'show' );
-
-                if ( _body.width() < 1200 ) {
-                    _searchForm.css( {
-                        'width': _body.outerWidth()
-                    } );
-                } else if ( _body.width() >= 1200 ) {
-                    _searchForm.addClass( 'increase' );
-                }
+                _obj.addClass( 'increase' );
 
                 if ( onEvent != 0 ){
 
@@ -259,9 +262,9 @@
                 _illumination();
                 _searchMoreLink();
 
-                if (_body.width() < 1200) {
+                if (_body.width() < 975) {
                     _showPopup();
-                } else if (_body.width() >= 1200) {
+                } else if (_body.width() >= 975) {
                     _increaseSearch();
                 }
 
